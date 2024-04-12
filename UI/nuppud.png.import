@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k6mu061ntby2"
-path="res://.godot/imported/toutorial.png-09cc9c907ffc925a5020daf1a6b35150.ctex"
+uid="uid://c8gfh0xeqde3r"
+path="res://.godot/imported/nuppud.png-f079e0d82c79d1b023e29a13c685fee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://toutorial.png"
-dest_files=["res://.godot/imported/toutorial.png-09cc9c907ffc925a5020daf1a6b35150.ctex"]
+source_file="res://UI/nuppud.png"
+dest_files=["res://.godot/imported/nuppud.png-f079e0d82c79d1b023e29a13c685fee1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i5n71bbo8qw0"
-path="res://.godot/imported/quit.png-135dbf70c5f268077bb3c1d4f05180a7.ctex"
+uid="uid://s8m1nem2o3xn"
+path="res://.godot/imported/speaker (1).svg-76227929d19d4bcccedca03ca3be74de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://quit.png"
-dest_files=["res://.godot/imported/quit.png-135dbf70c5f268077bb3c1d4f05180a7.ctex"]
+source_file="res://UI/speaker (1).svg"
+dest_files=["res://.godot/imported/speaker (1).svg-76227929d19d4bcccedca03ca3be74de.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

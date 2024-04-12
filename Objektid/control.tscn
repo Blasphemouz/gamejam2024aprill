@@ -1,12 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=11 format=3 uid="uid://bdfni6sjn8v2g"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_8kgaw"]
-[ext_resource type="Texture2D" uid="uid://s8m1nem2o3xn" path="res://speaker (1).svg" id="3_v3xqg"]
-[ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://nuppud.png" id="3_ww6py"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
+[ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="3_4ac73"]
 [ext_resource type="AudioStream" uid="uid://crkridwrg1dl0" path="res://assets/SFX/OST - saunatitle (loopable).mp3" id="4_kra35"]
-[ext_resource type="Script" path="res://VolumeSlider.gd" id="5_a6js8"]
-[ext_resource type="Texture2D" uid="uid://dkh4dmnhhg2rf" path="res://cancel.svg" id="6_lr4fe"]
-[ext_resource type="Texture2D" uid="uid://k6mu061ntby2" path="res://toutorial.png" id="8_c03tl"]
 [ext_resource type="AudioStream" uid="uid://cy3lke5kc376g" path="res://assets/SFX/UI_select.mp3" id="11_oqsmx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egyg5"]
@@ -35,7 +31,7 @@ offset_right = -2.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8kgaw")
+script = ExtResource("1_lgess")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -60,7 +56,6 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nvyv3")
 text = "Start"
-icon = ExtResource("3_ww6py")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -83,7 +78,6 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fm2jf")
 text = "tutorial"
-icon = ExtResource("3_ww6py")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -106,7 +100,6 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3kptt")
 text = "Exit"
-icon = ExtResource("3_ww6py")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -132,7 +125,6 @@ offset_right = 56.0
 offset_bottom = 56.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_duvfd")
-icon = ExtResource("3_v3xqg")
 flat = true
 expand_icon = true
 
@@ -146,7 +138,7 @@ offset_bottom = 41.0
 max_value = 1.0
 step = 0.05
 value = 0.5
-script = ExtResource("5_a6js8")
+script = ExtResource("3_4ac73")
 
 [node name="toutorialpanel" type="TextureRect" parent="."]
 visible = false
@@ -156,7 +148,6 @@ offset_left = 488.0
 offset_top = 120.0
 offset_right = 904.0
 offset_bottom = 632.0
-texture = ExtResource("8_c03tl")
 
 [node name="exittoutoutorial" type="Button" parent="toutorialpanel"]
 layout_mode = 0
@@ -165,7 +156,6 @@ offset_top = 16.0
 offset_right = 360.0
 offset_bottom = 48.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5unka")
-icon = ExtResource("6_lr4fe")
 flat = true
 expand_icon = true
 

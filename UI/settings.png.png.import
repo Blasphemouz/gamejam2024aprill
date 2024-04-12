@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b60h5shd5gu2p"
-path="res://.godot/imported/Wooden Pixel Art GUI 32x32.png-ad839e2c95a8c0de9246fbad16229e93.ctex"
+uid="uid://dorhade45r7d8"
+path="res://.godot/imported/settings.png.png-d78cc9dedfc2dc3613fb0aa03676d103.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Wooden Pixel Art GUI 32x32.png"
-dest_files=["res://.godot/imported/Wooden Pixel Art GUI 32x32.png-ad839e2c95a8c0de9246fbad16229e93.ctex"]
+source_file="res://UI/settings.png.png"
+dest_files=["res://.godot/imported/settings.png.png-d78cc9dedfc2dc3613fb0aa03676d103.ctex"]
 
 [params]
 
