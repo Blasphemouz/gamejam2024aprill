@@ -1,7 +1,9 @@
 extends Control
-var kiirusedasi=160
-var kiirusalla=160
+
+var kiirusedasi=50
+var kiirusalla=50
 var võetud=false
+
 @onready var p_kapikk = $"."
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
@@ -33,7 +35,7 @@ func _process(delta):
 			kiirusalla*=-1
 	else:
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
-		p_kapikk.set_position(get_global_mouse_position()+Vector2(-37,-15))
+		p_kapikk.set_position(get_global_mouse_position()+Vector2(-50,-10))
 			
 	
 func _on_button_pressed():
@@ -51,17 +53,3 @@ func _on_button_pressed():
 func kustuta():
 	queue_free()
 	get_parent().remove_child(self)	
-
-
-func _on_button_mouse_entered():
-	if(rng.randf_range(0,1)>0.75):
-		kiirusedasi*=-1
-	if(rng.randf_range(0,1)>0.75):
-		kiirusalla*=-1
-	kiirusedasi/=4
-	kiirusalla/=4
-
-
-func _on_button_mouse_exited():
-	kiirusedasi*=4
-	kiirusalla*=4

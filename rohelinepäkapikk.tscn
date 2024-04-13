@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://kwuhsx0oiscm"]
+
+[ext_resource type="Script" path="res://Scripts/rohelinepäkapikk.gd" id="1_7ic3h"]
+[ext_resource type="Texture2D" uid="uid://bxmke564hprli" path="res://assets/elf/elf_green_pinch1.png" id="2_ryl3l"]
+[ext_resource type="Texture2D" uid="uid://6f0hbokifsvq" path="res://assets/elf/elf_green_pinch2.png" id="3_0nr8f"]
+[ext_resource type="Texture2D" uid="uid://c4kl8dgyb0hma" path="res://assets/elf/elf_green_pinch3.png" id="4_fs3ca"]
+[ext_resource type="Texture2D" uid="uid://ch545xrrbfvr6" path="res://assets/elf/elf_green_walk1.png" id="5_bviq3"]
+[ext_resource type="Texture2D" uid="uid://ci1ttjlfaabfi" path="res://assets/elf/elf_green_walk2.png" id="6_pdmvl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66r0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wapgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2vuo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mgb8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4m3w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8f5xe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ryl3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0nr8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fs3ca")
+}],
+"loop": true,
+"name": &"Pinch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bviq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pdmvl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="rohelinepäkapikk" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ic3h")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1.0
+offset_top = -11.0
+offset_right = 57.0
+offset_bottom = 129.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_66r0u")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wapgf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q2vuo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4mgb8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4m3w")
+flat = true
+expand_icon = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(28, 61)
+scale = Vector2(2.32339, 3.58333)
+sprite_frames = SubResource("SpriteFrames_8f5xe")
+animation = &"Pinch"
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

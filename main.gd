@@ -3,14 +3,17 @@ extends Control
 const pk = preload("res://päkapikk.tscn")
 const kollanepk = preload("res://kollanepäkapikk.tscn")
 const sininepk = preload("res://sininepäkapikk.tscn")
+const rohelinepk = preload("res://rohelinepäkapikk.tscn")
 
 var enemy_factory
 var kollane_enemy_factory
 var sinine_enemy_factory
+var roheline_enemy_factory
 
 var päkkapikke = 0
 var kollaseidpäkkapikke = 0
 var siniseidpäkkapikke = 0
+var rohelisipäkkapikke = 0
 
 var rng = RandomNumberGenerator.new()
 
@@ -28,9 +31,6 @@ var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 @onready var pada = $Pada
 @onready var pildid = $Panel
 
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	# Kursor default
 	Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
@@ -38,10 +38,12 @@ func _ready():
 	enemy_factory = pk.instantiate()
 	kollane_enemy_factory = kollanepk.instantiate()
 	sinine_enemy_factory = sininepk.instantiate()
+	roheline_enemy_factory = rohelinepk.instantiate()
 	
 	add_enemy()
 	kollaneadd_enemy()
 	sinineadd_enemy()
+	rohelineadd_enemy()
 
 
 # Kursori asjad
@@ -56,12 +58,15 @@ func lisamuu(nood):
 	if(nood.name == "honey"):
 		mesi += 1
 		pildid.lisa("honey", mesi)
+		
 	if(nood.name == "jook"):
 		jook += 1
 		pildid.lisa("jook",jook)
+		
 	if(nood.name == "vesi"):
 		vesi += 1
 		pildid.lisa("vesi", vesi)
+		
 	if(nood.name == "lapinkulta"):
 		lapinkulta += 1
 		pildid.lisa("lapinkulta",lapinkulta)
@@ -80,6 +85,11 @@ func lisasininepäkapikk():
 	siniseidpäkkapikke += 1
 	pildid.lisa("sinine", siniseidpäkkapikke)
 	sinineadd_enemy()
+
+func lisarohelinepäkapikk():
+	rohelisipäkkapikke += 1
+	pildid.lisa("roheline", rohelisipäkkapikke)
+	rohelineadd_enemy()
 
 func getpada():
 	var hiir= get_global_mouse_position()
@@ -100,6 +110,11 @@ func kollaneadd_enemy():
 
 func sinineadd_enemy():
 	var enemy = sinine_enemy_factory.duplicate()
+	spawner.add_child(enemy)
+	enemy.position = Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0.3,0.7)*get_viewport().get_visible_rect().size.y)
+	
+func rohelineadd_enemy():
+	var enemy = roheline_enemy_factory.duplicate()
 	spawner.add_child(enemy)
 	enemy.position = Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0.3,0.7)*get_viewport().get_visible_rect().size.y)
 

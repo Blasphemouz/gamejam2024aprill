@@ -6,6 +6,7 @@ var pos
 var punanetekst
 var kollanetekst
 var sininetekst
+var rohelinetekst
 
 @onready var label = $Label
 var tektpos
@@ -46,6 +47,10 @@ func lisa(mida, mitu):
 			sininetekst = uustekst
 			img = load("res://assets/elf/elf_blue_stand.png")
 		
+		if(mida == "roheline"):
+			rohelinetekst = uustekst
+			img = load("res://assets/elf/elf_green_stand.png")
+		
 		if(mida == "vesi"):
 			vesitekst=uustekst
 			img = load("res://assets/cooking sim/water.png")
@@ -77,6 +82,9 @@ func lisa(mida, mitu):
 		
 	if (mida == "sinine"):
 		muudatekst(sininetekst, mitu)
+	
+	if (mida == "roheline"):
+		muudatekst(rohelinetekst, mitu) 
 		
 	if(mida == "vesi"):
 		muudatekst(vesitekst, mitu)
