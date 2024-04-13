@@ -7,12 +7,11 @@ var päkkapikke=0
 var kollaseidpäkkapikke=0
 var rng = RandomNumberGenerator.new()
 @onready var spawner=$"."
-@onready var pada = $Pada
-
-var kaspadas=false
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_grab.png")
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
+@onready var pada = $Pada
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,13 +24,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	#Kursori vajutus
 	if Input.is_action_pressed("BUTTON_LEFT"):
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
 	if Input.is_action_just_released("BUTTON_LEFT"):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
-	pass
 
 
 func _on_vesi_pressed():
@@ -45,25 +43,22 @@ func lisapäkapikk():
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
 	kollaneadd_enemy()
-
-
+func getpada():
+	var hiir= get_global_mouse_position()
+	if(pada.position.x < hiir.x and hiir.x  < (pada.position.x + pada.get_rect().size.x) and pada.position.y < hiir.y and hiir.y < (pada.position.y + pada.get_rect().size.x)):
+		return true
+	else:
+		return false
 func _on_jook_pressed():
 	pass # Replace with function body.
 func add_enemy():
 	var enemy = enemy_factory.duplicate()
 	spawner.add_child(enemy)
-	enemy.position=Vector2( rng.randf_range(0,1)*500, rng.randf_range(0,1)*500)
+	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
 func kollaneadd_enemy():
 	var enemy = kollane_enemy_factory.duplicate()
 	spawner.add_child(enemy)
-	enemy.position=Vector2( rng.randf_range(0,1)*1000, rng.randf_range(0,1)*600)
-	
-func getpada():
-	return kaspadas
-
-func _on_pada_mouse_entered():
-	kaspadas=true# Replace with function body.
+	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
 
 
-func _on_pada_mouse_exited():
-	kaspadas=false# Replace with function body.
+

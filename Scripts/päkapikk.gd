@@ -39,9 +39,8 @@ func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")
 		if(p_kapikk.get_parent().getpada()):
-				p_kapikk.get_parent().lisapäkapikk()
-				kustuta()
-				võetud=false
+			p_kapikk.get_parent().lisapäkapikk()
+			kustuta()
 		võetud=false
 	else:
 		animated_sprite_2d.play("Pinch")
