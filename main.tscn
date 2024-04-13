@@ -51,13 +51,15 @@ offset_right = 165.2
 offset_bottom = 582.0
 text = "vesi"
 
-[node name="spawner" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 73.0
-offset_top = 39.0
-offset_right = 1098.0
-offset_bottom = 362.0
+[node name="Pada" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 302.0
+offset_right = 677.0
+offset_bottom = 459.0
 
 [connection signal="pressed" from="jook" to="." method="_on_jook_pressed"]
 [connection signal="pressed" from="juust" to="." method="_on_juust_pressed"]
 [connection signal="pressed" from="vesi" to="." method="_on_vesi_pressed"]
+[connection signal="child_entered_tree" from="Pada" to="." method="_on_pada_child_entered_tree"]
+[connection signal="mouse_entered" from="Pada" to="." method="_on_pada_mouse_entered"]

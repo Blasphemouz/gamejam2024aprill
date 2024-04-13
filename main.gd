@@ -24,7 +24,7 @@ func _on_juust_pressed():
 	pass # Replace with function body.
 func lisapäkapikk():
 	päkkapikke+=1
-	#add_enemy()
+	add_enemy()
 	print(päkkapikke)
 
 
@@ -34,3 +34,10 @@ func add_enemy():
 	var enemy = enemy_factory.duplicate()
 	spawner.add_child(enemy)
 	enemy.position=Vector2(200,200)
+
+
+
+func _on_pada_child_entered_tree(node):
+	if(node.võetud):
+		päkkapikke+=1
+		add_enemy()
