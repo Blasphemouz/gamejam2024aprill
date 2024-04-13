@@ -33,7 +33,7 @@ func _process(delta):
 			kiirusalla*=-1
 	else:
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
-		p_kapikk.set_position(get_global_mouse_position()+Vector2(-25,-50))
+		p_kapikk.set_position(get_global_mouse_position()+Vector2(-37,-15))
 	
 func _on_button_pressed():
 	if(võetud):
