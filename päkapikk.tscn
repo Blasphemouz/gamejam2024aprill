@@ -1,11 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://db7ivbc6si385"]
 
-[ext_resource type="Script" path="res://päkapikk.gd" id="1_vpqf3"]
-[ext_resource type="Texture2D" uid="uid://dgip1rkp0cbct" path="res://assets/elf/elf_red_pinch1.png" id="2_dqebi"]
-[ext_resource type="Texture2D" uid="uid://byjujrfo15p4l" path="res://assets/elf/elf_red_walk1.png" id="2_uytrp"]
-[ext_resource type="Texture2D" uid="uid://bm5qye3ye77hi" path="res://assets/elf/elf_red_pinch2.png" id="3_mbp4c"]
-[ext_resource type="Texture2D" uid="uid://bcaeq78ey5mi" path="res://assets/elf/elf_red_walk2.png" id="3_swvho"]
-[ext_resource type="Texture2D" uid="uid://b13oy50x1fpji" path="res://assets/elf/elf_red_pinch3.png" id="4_leen2"]
+[ext_resource type="Script" path="res://Scripts/päkapikk.gd" id="1_iuaw0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4177h"]
 
@@ -17,17 +12,32 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hopmq"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5agr2"]
+load_path = "res://.godot/imported/elf_red_pinch1.png-d653659dc57947efadf06acb21adc57a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n7av8"]
+load_path = "res://.godot/imported/elf_red_pinch2.png-e14e287397966eacbd587d4f7215b878.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fbob4"]
+load_path = "res://.godot/imported/elf_red_pinch3.png-5d8fa094cf3635f75593e64303905a24.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04o80"]
+load_path = "res://.godot/imported/elf_red_walk1.png-5b3ff1e7945483d871e367958ea38954.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fwc5d"]
+load_path = "res://.godot/imported/elf_red_walk2.png-57df6caf566a2a4d0b161ec90be0cdd6.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_aom6g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_dqebi")
+"texture": SubResource("CompressedTexture2D_5agr2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_mbp4c")
+"texture": SubResource("CompressedTexture2D_n7av8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_leen2")
+"texture": SubResource("CompressedTexture2D_fbob4")
 }],
 "loop": true,
 "name": &"Pinch",
@@ -35,10 +45,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_uytrp")
+"texture": SubResource("CompressedTexture2D_04o80")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_swvho")
+"texture": SubResource("CompressedTexture2D_fwc5d")
 }],
 "loop": true,
 "name": &"default",
@@ -55,7 +65,7 @@ offset_bottom = -510.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.642277, 0.598244)
-script = ExtResource("1_vpqf3")
+script = ExtResource("1_iuaw0")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
