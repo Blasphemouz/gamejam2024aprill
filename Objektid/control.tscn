@@ -1,8 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=14 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
-[ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="3_4ac73"]
+[ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="2_ljkto"]
+[ext_resource type="Script" path="res://Objektid/VolumeSlider.gd" id="3_os2vy"]
+[ext_resource type="Texture2D" uid="uid://qkwignkbpugi" path="res://assets/titlescreen/start.png" id="3_v4y4s"]
+[ext_resource type="Texture2D" uid="uid://nuqu7x07de0a" path="res://assets/titlescreen/Settings.png" id="4_33yx3"]
 [ext_resource type="AudioStream" uid="uid://crkridwrg1dl0" path="res://assets/SFX/OST - saunatitle (loopable).mp3" id="4_kra35"]
+[ext_resource type="Texture2D" uid="uid://noahbgxu5i8s" path="res://assets/titlescreen/exit.png" id="5_cynq0"]
 [ext_resource type="AudioStream" uid="uid://cy3lke5kc376g" path="res://assets/SFX/UI_select.mp3" id="11_oqsmx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egyg5"]
@@ -18,11 +22,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kptt"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duvfd"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5unka"]
-
-[sub_resource type="SystemFont" id="SystemFont_vk7bw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,8 +38,9 @@ script = ExtResource("1_lgess")
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_right = 1278.0
-offset_bottom = 720.0
+offset_right = 1234.29
+offset_bottom = 671.0
+texture = ExtResource("2_ljkto")
 expand_mode = 3
 stretch_mode = 4
 
@@ -49,15 +50,15 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -95.0
-offset_top = 248.0
-offset_right = 89.0
-offset_bottom = 318.0
+offset_left = -454.0
+offset_top = 171.0
+offset_right = -270.0
+offset_bottom = 241.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nvyv3")
-text = "Start"
+icon = ExtResource("3_v4y4s")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -70,18 +71,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -95.0
-offset_top = -16.5
-offset_right = 89.0
-offset_bottom = 53.5
+offset_left = 402.0
+offset_top = -297.5
+offset_right = 586.0
+offset_bottom = -227.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fm2jf")
+text = "?"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Settings" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -38.5
+offset_right = -237.0
+offset_bottom = 39.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_fm2jf")
-text = "tutorial"
+icon = ExtResource("4_33yx3")
 flat = true
-icon_alignment = 1
 expand_icon = true
 
 [node name="exit" type="Button" parent="."]
@@ -92,16 +112,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -95.0
-offset_top = -281.0
-offset_right = 89.0
-offset_bottom = -211.0
+offset_left = -436.0
+offset_top = -250.0
+offset_right = -300.0
+offset_bottom = -197.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3kptt")
-text = "Exit"
+icon = ExtResource("5_cynq0")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -119,28 +139,15 @@ offset_right = 80.0
 offset_bottom = 72.0
 expand_mode = 1
 
-[node name="volume" type="Button" parent="TextureRect2"]
-layout_mode = 1
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_duvfd")
-flat = true
-expand_icon = true
-
 [node name="VolumeSlider" type="HSlider" parent="TextureRect2"]
-visible = false
 layout_mode = 0
-offset_left = 74.0
-offset_top = 25.0
-offset_right = 223.0
-offset_bottom = 41.0
+offset_left = 443.0
+offset_top = 543.0
+offset_right = 712.0
+offset_bottom = 575.0
 max_value = 1.0
 step = 0.05
-value = 0.5
-script = ExtResource("3_4ac73")
+script = ExtResource("3_os2vy")
 
 [node name="tutorialpanel" type="TextureRect" parent="."]
 visible = false
@@ -218,26 +225,17 @@ offset_bottom = 290.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "(E)"
 
-[node name="title" type="Label" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 48.0
-offset_top = 72.0
-offset_right = 1411.0
-offset_bottom = 170.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_vk7bw")
-theme_override_font_sizes/font_size = 42
-text = "You have been summoned
-"
-
 [node name="vajutus" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_oqsmx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="TextureRect2/volume" to="." method="_on_volume_pressed"]
-[connection signal="pressed" from="TextureRect2/volume" to="TextureRect2/VolumeSlider" method="_on_volume_pressed"]
-[connection signal="value_changed" from="TextureRect2/VolumeSlider" to="TextureRect2/VolumeSlider" method="_on_value_changed"]
+[connection signal="drag_ended" from="TextureRect2/VolumeSlider" to="." method="_on_volume_slider_drag_ended"]
+[connection signal="value_changed" from="TextureRect2/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="tutorialpanel/exittutoutorial" to="." method="_on_exittoutoutorial_pressed"]
