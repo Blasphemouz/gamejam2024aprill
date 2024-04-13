@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=6 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://dq113t0n4aapg" path="res://koht.png" id="2_ijvvn"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -23,15 +25,26 @@ texture = ExtResource("2_ijvvn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 153.0
+offset_bottom = 547.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_chvtc")
 script = ExtResource("3_jmn6d")
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 texture_filter = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 70.0
+offset_top = 6.0
+offset_right = 110.0
+offset_bottom = 46.0
+
+[node name="Label" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 65.0
+offset_bottom = 39.0
 
 [node name="Pada" type="Panel" parent="."]
 process_mode = 3
