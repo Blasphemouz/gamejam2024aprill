@@ -1,8 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://db7ivbc6si385"]
+[gd_scene load_steps=13 format=3 uid="uid://db7ivbc6si385"]
 
 [ext_resource type="Script" path="res://Scripts/päkapikk.gd" id="1_iuaw0"]
-[ext_resource type="AudioStream" uid="uid://c4qsxcdf5uqxd" path="res://assets/SFX/saunacook/PUNANE_grabbed.mp3" id="2_4daaf"]
-[ext_resource type="AudioStream" uid="uid://bjrhq35yesarv" path="res://assets/SFX/saunacook/elf_putdown.mp3" id="3_5qoat"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4177h"]
 
@@ -85,16 +83,9 @@ expand_icon = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(51.8971, 67.6667)
-scale = Vector2(4.00823, 3.41667)
+position = Vector2(46, 58)
+scale = Vector2(3.84, 3.274)
 sprite_frames = SubResource("SpriteFrames_aom6g")
-animation = &"Pinch"
-
-[node name="kraba_punane_p2ka" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_4daaf")
-
-[node name="p2ka_putdown" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_5qoat")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

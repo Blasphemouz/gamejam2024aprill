@@ -23,26 +23,19 @@ func _process(_delta):
 
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
-	
-	
-
 
 func _on_exit_pressed():
 	vajutus.play()
 	get_tree().quit()
 
-
 func _on_toutorial_pressed():
 	vajutus.play()
 	tutorialpanel.visible=true
-
-
 
 func _on_exittoutoutorial_pressed():
 	vajutus.play()
 	if tutorialpanel.visible==true:
 		tutorialpanel.visible=false
-
 
 func _on_settings_pressed():
 	if( panel.visible==false):

@@ -1,8 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://ooh7wb0qrw04"]
+[gd_scene load_steps=13 format=3 uid="uid://ooh7wb0qrw04"]
 
 [ext_resource type="Script" path="res://Scripts/kollanepäkapikk.gd" id="1_ib2xt"]
-[ext_resource type="AudioStream" uid="uid://cl3c3176xtavo" path="res://assets/SFX/saunacook/KOLLANE_grabbed.mp3" id="2_4ur5p"]
-[ext_resource type="AudioStream" uid="uid://bjrhq35yesarv" path="res://assets/SFX/saunacook/elf_putdown.mp3" id="3_qx25c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3acf"]
 
@@ -88,14 +86,6 @@ texture_filter = 1
 position = Vector2(46, 58)
 scale = Vector2(3.84, 2.9)
 sprite_frames = SubResource("SpriteFrames_vyibv")
-animation = &"Pinch"
-
-[node name="kraba_kollane_p2ka" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_4ur5p")
-
-[node name="p2ka_putdown" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_qx25c")
-volume_db = -7.495
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
