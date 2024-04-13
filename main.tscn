@@ -37,6 +37,8 @@ offset_left = 70.0
 offset_top = 6.0
 offset_right = 110.0
 offset_bottom = 46.0
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Label" type="Label" parent="Panel"]
 texture_filter = 1

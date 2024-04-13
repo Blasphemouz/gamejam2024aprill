@@ -2,12 +2,12 @@ extends Panel
 @onready var pildid = $"."
 @onready var texture_rect = $TextureRect
 var pos
-var punanepos;
-var kollanepos;
 var punanetekst
 var kollanetekst
 @onready var label = $Label
 var tektpos
+var vesitekst
+var jooktekst
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,12 +30,17 @@ func lisa(mida, mitu):
 		uustekst.set_position(tektpos+Vector2(30*mitu,0))
 		if(mida=="punane"):
 			punanetekst=uustekst
-			punanepos=pos
 			img = load("res://assets/elf/elf_red_stand.png")
 		if(mida=="kollane"):
 			kollanetekst=uustekst
-			kollanepos=pos
 			img = load("res://assets/elf/elf_yellow_stand.png")
+		if(mida=="vesi"):
+			vesitekst=uustekst
+			img =load("res://assets/cooking sim/water.png")
+		if(mida=="jook"):
+			jooktekst=uustekst
+			img =load("res://assets/cooking sim/‰llenaut.png")
+			
 		uus.texture=img
 		pos+=Vector2(0,50)
 		tektpos+=Vector2(0,50)
@@ -45,3 +50,7 @@ func lisa(mida, mitu):
 		muudatekst(punanetekst,mitu)
 	if(mida=="kollane"):
 		muudatekst(kollanetekst,mitu)
+	if(mida=="vesi"):
+		muudatekst(vesitekst,mitu)
+	if(mida=="jook"):
+		muudatekst(jooktekst,mitu)

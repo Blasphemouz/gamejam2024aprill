@@ -43,13 +43,13 @@ func lisapäkapikk():
 func lisamuu(nood):
 	if(nood.name=="juust"):
 		juustud+=1
-		pildid.lisa("juust")
+		pildid.lisa("juust", juustud)
 	if(nood.name=="jook"):
 		jook+=1
-		pildid.lisa("jook")
+		pildid.lisa("jook",jook)
 	if(nood.name=="vesi"):
 		vesi+=1
-		pildid.lisa("vesi")
+		pildid.lisa("vesi", vesi)
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
 	pildid.lisa("kollane",kollaseidpäkkapikke)
