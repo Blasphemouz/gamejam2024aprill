@@ -2,6 +2,7 @@ extends HSlider
 
 @export
 var bus_name: String
+
 var bus_index: int
 
 func _ready() -> void:
@@ -16,5 +17,5 @@ func _on_value_changed(value: float) -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
