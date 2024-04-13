@@ -1,11 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=23 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://dq113t0n4aapg" path="res://koht.png" id="2_ijvvn"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
+[ext_resource type="Texture2D" uid="uid://cy74nbhexx8mf" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://db0pfsuaht3nn" path="res://assets/cooking sim/water.png" id="5_ymamc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slecx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlolh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bb3ug"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpoth"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47aia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4wbn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yy2mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4ch7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7bnq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_miqgo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1pgfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mx5kw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrt30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ckm24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1iegr"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -63,11 +95,18 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
 anchor_right = 0.025
-offset_left = 301.2
-offset_top = 552.0
-offset_right = 381.2
-offset_bottom = 583.0
-text = "1. asi"
+offset_left = 268.2
+offset_top = 541.0
+offset_right = 337.2
+offset_bottom = 609.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slecx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dlolh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bb3ug")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qpoth")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_47aia")
+icon = ExtResource("4_a636i")
+flat = true
+expand_icon = true
 script = ExtResource("3_tfv3r")
 
 [node name="juust" type="Button" parent="."]
@@ -75,23 +114,36 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
 anchor_right = 0.025
-offset_left = 528.2
-offset_top = 554.0
-offset_right = 608.2
-offset_bottom = 585.0
+offset_left = 401.2
+offset_top = 568.0
+offset_right = 481.2
+offset_bottom = 599.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k4wbn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yy2mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y4ch7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g7bnq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_miqgo")
 text = "Juust"
 script = ExtResource("3_tfv3r")
 
 [node name="vesi" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
 anchor_right = 0.025
-offset_left = 85.2
-offset_top = 551.0
-offset_right = 165.2
-offset_bottom = 582.0
-text = "vesi"
+offset_left = 125.2
+offset_top = 549.0
+offset_right = 184.2
+offset_bottom = 618.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1pgfr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mx5kw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wrt30")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ckm24")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1iegr")
+icon = ExtResource("5_ymamc")
+flat = true
+expand_icon = true
 script = ExtResource("3_tfv3r")
 
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]

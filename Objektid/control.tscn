@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://qkwignkbpugi" path="res://assets/titlescreen/start.png" id="3_v4y4s"]
 [ext_resource type="Texture2D" uid="uid://nuqu7x07de0a" path="res://assets/titlescreen/Settings.png" id="4_33yx3"]
 [ext_resource type="AudioStream" uid="uid://crkridwrg1dl0" path="res://assets/SFX/OST - saunatitle (loopable).mp3" id="4_kra35"]
-[ext_resource type="PackedScene" uid="uid://bd4d5slauclpo" path="res://Scripts/volume_slider.tscn" id="5_3p4xw"]
+[ext_resource type="PackedScene" path="res://Scripts/volume_slider.tscn" id="5_3p4xw"]
 [ext_resource type="Texture2D" uid="uid://noahbgxu5i8s" path="res://assets/titlescreen/exit.png" id="5_cynq0"]
 [ext_resource type="AudioStream" uid="uid://cy3lke5kc376g" path="res://assets/SFX/UI_select.mp3" id="11_oqsmx"]
 
