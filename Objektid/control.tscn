@@ -62,7 +62,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="toutorial" type="Button" parent="."]
+[node name="tutorial" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -142,7 +142,7 @@ step = 0.05
 value = 0.5
 script = ExtResource("3_4ac73")
 
-[node name="toutorialpanel" type="TextureRect" parent="."]
+[node name="tutorialpanel" type="TextureRect" parent="."]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -151,7 +151,7 @@ offset_top = 120.0
 offset_right = 904.0
 offset_bottom = 632.0
 
-[node name="exittoutoutorial" type="Button" parent="toutorialpanel"]
+[node name="exittutoutorial" type="Button" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 328.0
 offset_top = 16.0
@@ -161,7 +161,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_5unka")
 flat = true
 expand_icon = true
 
-[node name="Label" type="Label" parent="toutorialpanel"]
+[node name="Label" type="Label" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 48.0
 offset_top = 88.0
@@ -180,7 +180,7 @@ BE CAREFUL WHEN ALCOHOL METER GOES
 FULL YOU LOSE CONSCIOUSNESS!
 "
 
-[node name="Label2" type="Label" parent="toutorialpanel"]
+[node name="Label2" type="Label" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 80.0
@@ -191,7 +191,7 @@ theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
 text = "TO WIN YOU HAVE TO DEFEAT JYRKI
 IN SAUN STANDOFF."
 
-[node name="control" type="Label" parent="toutorialpanel"]
+[node name="control" type="Label" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 312.0
 offset_top = 136.0
@@ -200,7 +200,7 @@ offset_bottom = 162.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "(SPACE)"
 
-[node name="control2" type="Label" parent="toutorialpanel"]
+[node name="control2" type="Label" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 188.0
@@ -209,7 +209,7 @@ offset_bottom = 214.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "(R)"
 
-[node name="control3" type="Label" parent="toutorialpanel"]
+[node name="control3" type="Label" parent="tutorialpanel"]
 layout_mode = 0
 offset_left = 315.0
 offset_top = 264.0
@@ -235,9 +235,9 @@ text = "You have been summoned
 stream = ExtResource("11_oqsmx")
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="toutorial" to="." method="_on_toutorial_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="TextureRect2/volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="TextureRect2/volume" to="TextureRect2/VolumeSlider" method="_on_volume_pressed"]
 [connection signal="value_changed" from="TextureRect2/VolumeSlider" to="TextureRect2/VolumeSlider" method="_on_value_changed"]
-[connection signal="pressed" from="toutorialpanel/exittoutoutorial" to="." method="_on_exittoutoutorial_pressed"]
+[connection signal="pressed" from="tutorialpanel/exittutoutorial" to="." method="_on_exittoutoutorial_pressed"]

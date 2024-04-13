@@ -19,7 +19,6 @@ func _process(_delta):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
 
 func _on_start_pressed():
-	control.queue_free()
 	get_tree().change_scene_to_file("res://main.tscn")
 
 
