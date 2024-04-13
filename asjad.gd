@@ -9,7 +9,7 @@ func _ready():
 	position1 = nupp.position
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta):
 	if(kaspeal):
 		nupp.set_position(get_global_mouse_position() + Vector2(-20, -20))
