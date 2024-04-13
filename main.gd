@@ -6,9 +6,10 @@ var kollane_enemy_factory
 var päkkapikke=0
 var kollaseidpäkkapikke=0
 var rng = RandomNumberGenerator.new()
-var juustud=0
+var mesi=0
 var jook =0
 var vesi=0
+var lapinkulta=0
 @onready var spawner=$"."
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_grab.png")
@@ -41,15 +42,18 @@ func lisapäkapikk():
 	pildid.lisa("punane", päkkapikke)
 	add_enemy()
 func lisamuu(nood):
-	if(nood.name=="juust"):
-		juustud+=1
-		pildid.lisa("juust", juustud)
+	if(nood.name=="honey"):
+		mesi+=1
+		pildid.lisa("honey", mesi)
 	if(nood.name=="jook"):
 		jook+=1
 		pildid.lisa("jook",jook)
 	if(nood.name=="vesi"):
 		vesi+=1
 		pildid.lisa("vesi", vesi)
+	if(nood.name=="lapinkulta"):
+		lapinkulta+=1
+		pildid.lisa("lapinkulta",lapinkulta)
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
 	pildid.lisa("kollane",kollaseidpäkkapikke)
@@ -68,3 +72,9 @@ func kollaneadd_enemy():
 	var enemy = kollane_enemy_factory.duplicate()
 	spawner.add_child(enemy)
 	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
+
+
+func _on_järgminestseen_pressed():
+	if(jook>10):
+		pass
+	#erinevad stseenid pärast seda vastavalt potis olevatale asjadele

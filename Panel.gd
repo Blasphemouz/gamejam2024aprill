@@ -8,6 +8,8 @@ var kollanetekst
 var tektpos
 var vesitekst
 var jooktekst
+var honeytekst
+var lapinkultatekst
 
 
 # Called when the node enters the scene tree for the first time.
@@ -40,6 +42,12 @@ func lisa(mida, mitu):
 		if(mida=="jook"):
 			jooktekst=uustekst
 			img =load("res://assets/cooking sim/‰llenaut.png")
+		if(mida=="honey"):
+			honeytekst=uustekst
+			img =load("res://assets/cooking sim/honey.png")
+		if(mida=="lapinkulta"):
+			lapinkultatekst=uustekst
+			img =load("res://assets/cooking sim/lapinkulta.png")
 			
 		uus.texture=img
 		pos+=Vector2(0,50)
@@ -54,3 +62,7 @@ func lisa(mida, mitu):
 		muudatekst(vesitekst,mitu)
 	if(mida=="jook"):
 		muudatekst(jooktekst,mitu)
+	if(mida=="honey"):
+		muudatekst(honeytekst,mitu)
+	if(mida=="lapinkulta"):
+		muudatekst(lapinkultatekst,mitu)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=30 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://dq113t0n4aapg" path="res://koht.png" id="2_ijvvn"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
 [ext_resource type="Texture2D" uid="uid://cy74nbhexx8mf" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
 [ext_resource type="Texture2D" uid="uid://db0pfsuaht3nn" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://l6fef8a0oujo" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://86c77inckndd" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -19,16 +21,6 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47aia"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4wbn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yy2mb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4ch7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7bnq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_miqgo"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1pgfr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mx5kw"]
@@ -38,6 +30,26 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ckm24"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1iegr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjoqy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpxai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72h2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jm4yl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qn631"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ln8ls"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fxao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2adqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ue8h6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfvd8"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -109,23 +121,6 @@ flat = true
 expand_icon = true
 script = ExtResource("3_tfv3r")
 
-[node name="juust" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_right = 0.025
-offset_left = 401.2
-offset_top = 568.0
-offset_right = 481.2
-offset_bottom = 599.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_k4wbn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yy2mb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_y4ch7")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g7bnq")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_miqgo")
-text = "Juust"
-script = ExtResource("3_tfv3r")
-
 [node name="vesi" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
@@ -146,6 +141,51 @@ flat = true
 expand_icon = true
 script = ExtResource("3_tfv3r")
 
+[node name="honey" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 222.0
+offset_top = 539.0
+offset_right = 304.0
+offset_bottom = 628.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tjoqy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cpxai")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_72h2v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jm4yl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qn631")
+icon = ExtResource("7_4l0bf")
+flat = true
+expand_icon = true
+script = ExtResource("3_tfv3r")
+
+[node name="lapinkulta" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 358.0
+offset_top = 555.0
+offset_right = 427.0
+offset_bottom = 626.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ln8ls")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("8_mpwkt")
+flat = true
+expand_icon = true
+script = ExtResource("3_tfv3r")
+
+[node name="järgminestseen" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 880.0
+offset_top = 473.0
+offset_right = 1015.0
+offset_bottom = 517.0
+text = "EDASI"
+
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
-[connection signal="pressed" from="juust" to="juust" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]
+[connection signal="pressed" from="honey" to="honey" method="_on_pressed"]
+[connection signal="pressed" from="lapinkulta" to="lapinkulta" method="_on_pressed"]
+[connection signal="pressed" from="järgminestseen" to="." method="_on_järgminestseen_pressed"]
