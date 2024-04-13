@@ -67,11 +67,11 @@ func getpada():
 func add_enemy():
 	var enemy = enemy_factory.duplicate()
 	spawner.add_child(enemy)
-	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
+	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0.3,0.7)*get_viewport().get_visible_rect().size.y)
 func kollaneadd_enemy():
 	var enemy = kollane_enemy_factory.duplicate()
 	spawner.add_child(enemy)
-	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
+	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0.3,0.7)*get_viewport().get_visible_rect().size.y)
 
 
 func _on_järgminestseen_pressed():

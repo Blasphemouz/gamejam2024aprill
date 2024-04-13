@@ -1,13 +1,13 @@
 [gd_scene load_steps=30 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://bvgwdos2g6lel" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://cbsncf1hro565" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://c0dpllc81jyvj" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://dxl0lcv2p4h5m" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://bsa1gavtyegnu" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://b87najd2t7t0b" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://brvb3bsk6f0or" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://objuw1wytjky" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://d18suy850pyte" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://dtc2dn5s17pct" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -101,6 +101,14 @@ offset_top = 354.0
 offset_right = 681.0
 offset_bottom = 412.0
 
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.031
+offset_top = 541.0
+offset_right = 1155.0
+offset_bottom = 621.912
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="jook" type="Button" parent="."]
@@ -184,14 +192,6 @@ offset_top = 473.0
 offset_right = 1015.0
 offset_bottom = 517.0
 text = "EDASI"
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.031
-offset_top = 541.0
-offset_right = 1155.0
-offset_bottom = 621.912
 
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]
