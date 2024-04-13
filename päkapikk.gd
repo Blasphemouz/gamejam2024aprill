@@ -6,6 +6,9 @@ var võetud=false
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+# Kursori asjad
+var kursor = load("res://assets/cursor/cursor_grab.png")
+var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 
 # Called when the node enters the scene tree for the first time.
 var rng = RandomNumberGenerator.new()
@@ -30,6 +33,7 @@ func _process(delta):
 		if(p_kapikk.position.y>640 or p_kapikk.position.y<0):
 			kiirusalla*=-1
 	else:
+		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16)) # kursori stiil grab
 		p_kapikk.set_position(get_global_mouse_position()+Vector2(-25,-50))
 		if(p_kapikk.position.x>300 and p_kapikk.position.x<400 and p_kapikk.position.y<700 and p_kapikk.position.y>300):
 			if(võetud):
