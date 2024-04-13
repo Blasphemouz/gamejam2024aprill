@@ -1,2 +1,25 @@
 # Godot 4+ specific ignores
 .godot/
+<<<<<<< HEAD
+=======
+*.import
+
+.mono/
+data_*/
+mono_crash.*.json
+
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+*.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+>>>>>>> b6469c7c243b5fe4e4f9631db425acf68fa37912
