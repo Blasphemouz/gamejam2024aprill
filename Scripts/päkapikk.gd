@@ -5,7 +5,9 @@ var võetud=false
 @onready var p_kapikk = $"."
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var kraba_punane_päka = $"kraba_punane_päka"
+@onready var kraba_punane_p2ka = $"kraba_punane_p2ka"
+@onready var p2ka_putdown = $"p2ka_putdown"
+
 # Kursori asjad
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 
@@ -38,13 +40,14 @@ func _process(delta):
 func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")
+		p2ka_putdown.play()
 		if(p_kapikk.get_parent().getpada()):
 			p_kapikk.get_parent().lisapäkapikk()
 			kustuta()
 		võetud=false
 	else:
 		animated_sprite_2d.play("Pinch")
-		kraba_punane_päka.play()
+		kraba_punane_p2ka.play()
 		võetud=true
 	
 func kustuta():
