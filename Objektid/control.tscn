@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=21 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
 [ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="2_ljkto"]
-[ext_resource type="Script" path="res://Objektid/VolumeSlider.gd" id="3_os2vy"]
 [ext_resource type="Texture2D" uid="uid://qkwignkbpugi" path="res://assets/titlescreen/start.png" id="3_v4y4s"]
 [ext_resource type="Texture2D" uid="uid://nuqu7x07de0a" path="res://assets/titlescreen/Settings.png" id="4_33yx3"]
 [ext_resource type="AudioStream" uid="uid://crkridwrg1dl0" path="res://assets/SFX/OST - saunatitle (loopable).mp3" id="4_kra35"]
+[ext_resource type="PackedScene" uid="uid://bd4d5slauclpo" path="res://Scripts/volume_slider.tscn" id="5_3p4xw"]
 [ext_resource type="Texture2D" uid="uid://noahbgxu5i8s" path="res://assets/titlescreen/exit.png" id="5_cynq0"]
 [ext_resource type="AudioStream" uid="uid://cy3lke5kc376g" path="res://assets/SFX/UI_select.mp3" id="11_oqsmx"]
 
@@ -19,6 +19,20 @@ corner_radius_bottom_left = 10
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvyv3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm2jf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rc6xt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4skm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfr1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqm4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uab3"]
+
+[sub_resource type="Theme" id="Theme_7vt5s"]
+
+[sub_resource type="Theme" id="Theme_7fwsv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kptt"]
 
@@ -50,10 +64,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -454.0
-offset_top = 171.0
-offset_right = -270.0
-offset_bottom = 241.0
+offset_left = -453.0
+offset_top = 185.0
+offset_right = -269.0
+offset_bottom = 255.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_egyg5")
@@ -88,21 +102,72 @@ expand_icon = true
 [node name="Settings" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.501
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.501
 offset_left = -486.0
-offset_top = -38.5
+offset_top = -39.149
 offset_right = -237.0
-offset_bottom = 39.5
+offset_bottom = 38.851
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rc6xt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e4skm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wfr1o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yqm4m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8uab3")
 icon = ExtResource("4_33yx3")
 flat = true
 expand_icon = true
+
+[node name="Panel" type="Panel" parent="Settings"]
+layout_mode = 0
+offset_left = 142.0
+offset_top = -153.0
+offset_right = 885.0
+offset_bottom = 298.0
+theme = SubResource("Theme_7vt5s")
+
+[node name="välju" type="Button" parent="Settings/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 646.0
+offset_top = 21.0
+offset_right = 704.0
+offset_bottom = 64.0
+theme = SubResource("Theme_7fwsv")
+text = "Back"
+
+[node name="master" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 118.0
+offset_right = 516.0
+offset_bottom = 134.0
+min_value = -30.0
+max_value = 0.0
+step = 1.0
+bus_name = "Master"
+
+[node name="SFX" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 208.0
+offset_right = 518.0
+offset_bottom = 224.0
+max_value = 0.0
+bus_name = "SFX"
+
+[node name="Music" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 285.0
+offset_right = 512.0
+offset_bottom = 301.0
+bus_name = "Music"
 
 [node name="exit" type="Button" parent="."]
 texture_filter = 1
@@ -112,10 +177,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -436.0
-offset_top = -250.0
-offset_right = -300.0
-offset_bottom = -197.0
+offset_left = -435.0
+offset_top = -236.0
+offset_right = -299.0
+offset_bottom = -183.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
@@ -129,25 +194,6 @@ expand_icon = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_kra35")
 autoplay = true
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 16.0
-offset_top = 8.0
-offset_right = 80.0
-offset_bottom = 72.0
-expand_mode = 1
-
-[node name="VolumeSlider" type="HSlider" parent="TextureRect2"]
-layout_mode = 0
-offset_left = 443.0
-offset_top = 543.0
-offset_right = 712.0
-offset_bottom = 575.0
-max_value = 1.0
-step = 0.05
-script = ExtResource("3_os2vy")
 
 [node name="tutorialpanel" type="TextureRect" parent="."]
 visible = false
@@ -230,12 +276,14 @@ stream = ExtResource("11_oqsmx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 158.0
+offset_top = 542.0
+offset_right = 198.0
+offset_bottom = 582.0
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Settings/Panel/välju" to="." method="_on_välju_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
-[connection signal="drag_ended" from="TextureRect2/VolumeSlider" to="." method="_on_volume_slider_drag_ended"]
-[connection signal="value_changed" from="TextureRect2/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="tutorialpanel/exittutoutorial" to="." method="_on_exittoutoutorial_pressed"]
