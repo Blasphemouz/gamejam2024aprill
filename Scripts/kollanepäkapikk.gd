@@ -41,7 +41,7 @@ func _process(delta):
 func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")
-		p2ka_putdown.play()
+		#p2ka_putdown.play()
 		if(p_kapikk.get_parent().getpada()):
 			p_kapikk.get_parent().lisakollanepäkapikk()
 			kustuta()
@@ -49,7 +49,7 @@ func _on_button_pressed():
 		võetud=false
 	else:
 		animated_sprite_2d.play("Pinch")
-		kraba_kollane_p2ka.play()
+		#kraba_kollane_p2ka.play()
 		võetud=true
 	
 func kustuta():
