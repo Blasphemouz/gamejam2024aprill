@@ -1,8 +1,7 @@
 extends Control
-@onready var toutorialpanel = $toutorialpanel
+@onready var tutorialpanel = $tutorialpanel
 @onready var vajutus = $vajutus
 @onready var control = $"."
-@onready var h_box_container = $Settings/HBoxContainer
 
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_select.png")
@@ -35,14 +34,14 @@ func _on_exit_pressed():
 
 func _on_toutorial_pressed():
 	vajutus.play()
-	toutorialpanel.visible=true
+	tutorialpanel.visible=true
 
 
 
 func _on_exittoutoutorial_pressed():
 	vajutus.play()
-	if toutorialpanel.visible==true:
-		toutorialpanel.visible=false
+	if tutorialpanel.visible==true:
+		tutorialpanel.visible=false
 
 
 func _on_settings_pressed():
