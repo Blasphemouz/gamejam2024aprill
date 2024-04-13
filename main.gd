@@ -6,6 +6,9 @@ var kollane_enemy_factory
 var päkkapikke=0
 var kollaseidpäkkapikke=0
 var rng = RandomNumberGenerator.new()
+var juustud=0
+var jook =0
+var vesi=0
 @onready var spawner=$"."
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_grab.png")
@@ -31,15 +34,18 @@ func _process(_delta):
 	if Input.is_action_just_released("BUTTON_LEFT"):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
 
-
-func _on_vesi_pressed():
-	pass
-
-func _on_juust_pressed():
-	pass # Replace with function body.
 func lisapäkapikk():
 	päkkapikke+=1
 	add_enemy()
+func lisamuu(nood):
+	if(nood.name=="juust"):
+		juustud+=1
+	if(nood.name=="jook"):
+		jook+=1
+	if(nood.name=="vesi"):
+		vesi+=1
+	
+	
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
 	kollaneadd_enemy()
@@ -49,8 +55,6 @@ func getpada():
 		return true
 	else:
 		return false
-func _on_jook_pressed():
-	pass # Replace with function body.
 func add_enemy():
 	var enemy = enemy_factory.duplicate()
 	spawner.add_child(enemy)
