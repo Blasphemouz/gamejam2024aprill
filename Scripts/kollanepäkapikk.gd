@@ -5,6 +5,7 @@ var võetud=false
 @onready var p_kapikk = $"."
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var kraba_kollane_päka = $"kraba_kollane_päka"
 
 # Kursori asjad
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
@@ -46,6 +47,7 @@ func _on_button_pressed():
 		võetud=false
 	else:
 		animated_sprite_2d.play("Pinch")
+		kraba_kollane_päka.play()
 		võetud=true
 	
 func kustuta():
