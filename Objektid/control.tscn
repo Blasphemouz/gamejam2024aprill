@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=12 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="3_4ac73"]
@@ -21,6 +21,8 @@ corner_radius_bottom_left = 10
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duvfd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5unka"]
+
+[sub_resource type="SystemFont" id="SystemFont_vk7bw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -219,13 +221,15 @@ text = "(E)"
 [node name="title" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 48.0
-offset_top = 72.0
-offset_right = 1411.0
-offset_bottom = 170.0
-theme_override_colors/font_color = Color(0.447059, 0.286275, 0.027451, 1)
-theme_override_font_sizes/font_size = 35
-text = "In a Sauna with Finnish Man Jyrki from Ailionjärvi"
+offset_left = 295.0
+offset_top = 79.0
+offset_right = 1658.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_vk7bw")
+theme_override_font_sizes/font_size = 42
+text = "You have been summoned
+"
 
 [node name="vajutus" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_oqsmx")

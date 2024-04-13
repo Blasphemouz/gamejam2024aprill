@@ -1,6 +1,7 @@
 extends Control
 @onready var toutorialpanel = $toutorialpanel
 @onready var vajutus = $vajutus
+@onready var control = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,12 +9,13 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://tutorial.tscn")
+	control.queue_free()
+	get_tree().change_scene_to_file("res://main.tscn")
 
 
 func _on_exit_pressed():
