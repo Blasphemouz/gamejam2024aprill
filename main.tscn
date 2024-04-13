@@ -63,3 +63,4 @@ offset_bottom = 459.0
 [connection signal="pressed" from="vesi" to="." method="_on_vesi_pressed"]
 [connection signal="child_entered_tree" from="Pada" to="." method="_on_pada_child_entered_tree"]
 [connection signal="mouse_entered" from="Pada" to="." method="_on_pada_mouse_entered"]
+[connection signal="mouse_exited" from="Pada" to="." method="_on_pada_mouse_exited"]

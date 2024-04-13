@@ -27,9 +27,9 @@ func _process(delta):
 	if(!võetud):
 		var asi=Vector2(kiirusedasi*delta,kiirusalla*delta)
 		p_kapikk.set_position(p_kapikk.position+asi)
-		if(p_kapikk.position.x>1150 or p_kapikk.position.x<0):
+		if(p_kapikk.position.x>get_viewport().get_visible_rect().size.x or p_kapikk.position.x<0):
 			kiirusedasi*=-1
-		if(p_kapikk.position.y>640 or p_kapikk.position.y<0):
+		if(p_kapikk.position.y>get_viewport().get_visible_rect().size.y or p_kapikk.position.y<0):
 			kiirusalla*=-1
 	else:
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
@@ -39,8 +39,7 @@ func _process(delta):
 func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")
-		if(p_kapikk.position.x>300 and p_kapikk.position.x<400 and p_kapikk.position.y<700 and p_kapikk.position.y>300):
-			if(võetud):
+		if(p_kapikk.get_parent().getpada()):
 				p_kapikk.get_parent().lisakollanepäkapikk()
 				kustuta()
 				võetud=false

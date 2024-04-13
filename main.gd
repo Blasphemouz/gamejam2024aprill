@@ -7,7 +7,9 @@ var päkkapikke=0
 var kollaseidpäkkapikke=0
 var rng = RandomNumberGenerator.new()
 @onready var spawner=$"."
+@onready var pada = $Pada
 
+var kaspadas=false
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_grab.png")
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
@@ -55,3 +57,13 @@ func kollaneadd_enemy():
 	var enemy = kollane_enemy_factory.duplicate()
 	spawner.add_child(enemy)
 	enemy.position=Vector2( rng.randf_range(0,1)*1000, rng.randf_range(0,1)*600)
+	
+func getpada():
+	return kaspadas
+
+func _on_pada_mouse_entered():
+	kaspadas=true# Replace with function body.
+
+
+func _on_pada_mouse_exited():
+	kaspadas=false# Replace with function body.
