@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://db7ivbc6si385"]
+[gd_scene load_steps=13 format=3 uid="uid://db7ivbc6si385"]
 
 [ext_resource type="Script" path="res://päkapikk.gd" id="1_vpqf3"]
 [ext_resource type="Texture2D" uid="uid://dgip1rkp0cbct" path="res://assets/elf/elf_red_pinch1.png" id="2_dqebi"]
@@ -6,6 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://bm5qye3ye77hi" path="res://assets/elf/elf_red_pinch2.png" id="3_mbp4c"]
 [ext_resource type="Texture2D" uid="uid://bcaeq78ey5mi" path="res://assets/elf/elf_red_walk2.png" id="3_swvho"]
 [ext_resource type="Texture2D" uid="uid://b13oy50x1fpji" path="res://assets/elf/elf_red_pinch3.png" id="4_leen2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4177h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxkul"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfn1w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e814w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hopmq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aom6g"]
 animations = [{
@@ -40,10 +50,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1047.0
-offset_bottom = -512.0
+offset_right = -1046.0
+offset_bottom = -510.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.642277, 0.598244)
 script = ExtResource("1_vpqf3")
 
 [node name="Button" type="Button" parent="."]
@@ -52,10 +63,16 @@ offset_left = 1.0
 offset_top = -1.0
 offset_right = 108.0
 offset_bottom = 139.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4177h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qxkul")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rfn1w")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_e814w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hopmq")
 flat = true
 expand_icon = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(51.8971, 67.6667)
 scale = Vector2(4.00823, 3.41667)
 sprite_frames = SubResource("SpriteFrames_aom6g")

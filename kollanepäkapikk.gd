@@ -1,6 +1,6 @@
 extends Control
-var kiirusedasi=60
-var kiirusalla=60
+var kiirusedasi=160
+var kiirusalla=160
 var võetud=false
 @onready var p_kapikk = $"."
 @onready var button = $Button
@@ -37,7 +37,7 @@ func _process(delta):
 		p_kapikk.set_position(get_global_mouse_position()+Vector2(-25,-50))
 		if(p_kapikk.position.x>300 and p_kapikk.position.x<400 and p_kapikk.position.y<700 and p_kapikk.position.y>300):
 			if(võetud):
-				p_kapikk.get_parent().lisapäkapikk()
+				p_kapikk.get_parent().lisakollanepäkapikk()
 				kustuta()
 				võetud=false
 			
@@ -60,10 +60,10 @@ func _on_button_mouse_entered():
 		kiirusedasi*=-1
 	if(rng.randf_range(0,1)>0.75):
 		kiirusalla*=-1
-	kiirusedasi*=2
-	kiirusalla*=2
+	kiirusedasi/=4
+	kiirusalla/=4
 
 
 func _on_button_mouse_exited():
-	kiirusedasi/=2
-	kiirusalla/=2
+	kiirusedasi*=4
+	kiirusalla*=4
