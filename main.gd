@@ -14,6 +14,8 @@ var vesi=0
 var kursor = load("res://assets/cursor/cursor_grab.png")
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 @onready var pada = $Pada
+@onready var pildid = $Panel
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,18 +38,21 @@ func _process(_delta):
 
 func lisapäkapikk():
 	päkkapikke+=1
+	pildid.lisa("punane", päkkapikke)
 	add_enemy()
 func lisamuu(nood):
 	if(nood.name=="juust"):
 		juustud+=1
+		pildid.lisa("juust")
 	if(nood.name=="jook"):
 		jook+=1
+		pildid.lisa("jook")
 	if(nood.name=="vesi"):
 		vesi+=1
-	
-	
+		pildid.lisa("vesi")
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
+	pildid.lisa("kollane")
 	kollaneadd_enemy()
 func getpada():
 	var hiir= get_global_mouse_position()
@@ -63,6 +68,3 @@ func kollaneadd_enemy():
 	var enemy = kollane_enemy_factory.duplicate()
 	spawner.add_child(enemy)
 	enemy.position=Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0,1)*get_viewport().get_visible_rect().size.y)
-
-
-
