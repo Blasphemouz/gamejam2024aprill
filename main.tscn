@@ -28,6 +28,7 @@ offset_bottom = 40.0
 script = ExtResource("3_jmn6d")
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

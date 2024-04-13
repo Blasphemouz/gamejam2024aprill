@@ -2,6 +2,8 @@ extends Panel
 @onready var pildid = $"."
 @onready var texture_rect = $TextureRect
 var pos
+var punanepos;
+var kollanepos;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,5 +23,11 @@ func lisapilt(path, pos1, mitu):
 func lisa(mida, mitu):
 	if(mitu==1):
 		pos+=Vector2(0,50)
+		if(mida=="punane"):
+			punanepos=pos
+		if(mida=="kollane"):
+			kollanepos=pos
 	if(mida=="punane"):
-		lisapilt("res://assets/elf/elf_red_stand.png",pos, mitu)
+		lisapilt("res://assets/elf/elf_red_stand.png",punanepos, mitu)
+	if(mida=="kollane"):
+		lisapilt("res://assets/elf/elf_yellow_stand.png",kollanepos, mitu)

@@ -52,7 +52,7 @@ func lisamuu(nood):
 		pildid.lisa("vesi")
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke+=1
-	pildid.lisa("kollane")
+	pildid.lisa("kollane",kollaseidpäkkapikke)
 	kollaneadd_enemy()
 func getpada():
 	var hiir= get_global_mouse_position()
