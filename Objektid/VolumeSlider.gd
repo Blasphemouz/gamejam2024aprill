@@ -12,4 +12,9 @@ func _ready() -> void:
 func _on_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(_bus, linear_to_db(value))
 
+func _on_Settings_pressed():
+	visible = not visible
 
+
+func _on_settings_pressed():
+	pass # Replace with function body.
