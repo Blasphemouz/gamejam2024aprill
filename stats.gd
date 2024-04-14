@@ -62,3 +62,7 @@ func judgment_final(tingimus):
 		Dialogic.VAR.judgment.set('tingimus', true)
 	else:
 		return false
+func eelminestseen():
+	get_tree().change_scene_to_file("res://main.tscn")
+func järgminestseen():
+	get_tree().change_scene_to_file("res://kollanepäkapikk.tscn")

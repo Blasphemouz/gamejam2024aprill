@@ -39,13 +39,13 @@ func _process(delta):
 			kiirusalla*=-1
 	else:
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
-		p_kapikk.set_position(get_global_mouse_position()+Vector2(-34,-9))
+		p_kapikk.set_position(get_global_mouse_position()+Vector2(-34,-20))
 		if(p_kapikk.position.y>get_viewport().get_visible_rect().size.y*0.7 or p_kapikk.position.y<get_viewport().get_visible_rect().size.y*0.3):
 			võetud=false
 			animated_sprite_2d.play("default")
-			if p_kapikk.position.y>get_viewport().get_visible_rect().size.y*0.7:
+			if p_kapikk.position.y>get_viewport().get_visible_rect().size.y*0.7-10:
 				p_kapikk.set_position(p_kapikk.position+Vector2(0,-30))
-			if p_kapikk.position.y<get_viewport().get_visible_rect().size.y*0.3:
+			if p_kapikk.position.y<get_viewport().get_visible_rect().size.y*0.3+10:
 				p_kapikk.set_position(p_kapikk.position+Vector2(0,30))
 	
 	# Kui vajutada pausi nuppu 
