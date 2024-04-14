@@ -8,6 +8,7 @@ var kursor = load("res://assets/cursor/cursor_select.png")
 @onready var panel = $Settings/Panel
 var kursor_vajutus = load("res://assets/cursor/cursor_select_tap.png")
 @onready var välju = $"Settings/Panel/TextureRect/välju"
+@onready var audio_stream_player = $AudioStreamPlayer
 
 func _ready():
 	# Kursor default
@@ -22,6 +23,7 @@ func _process(_delta):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
 
 func _on_start_pressed():
+	audio_stream_player.stop()
 	get_tree().change_scene_to_file("res://tutorial.tscn")
 
 func _on_exit_pressed():
