@@ -1,3 +1,5 @@
 [background arg="res://assets/sauna/saunalantern.png" fade="0.0"]
+[sound path="res://assets/SFX/saunacook/poliisi.mp3" volume="0.0"]
 join poliisi 1
-i am poliisi
+poliisi: I have been waiting for you. We see what you did…
+poliisi: You are inhuman.. It is sin and crime what you do. You will be judged.
