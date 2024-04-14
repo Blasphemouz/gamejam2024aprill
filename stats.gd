@@ -58,7 +58,7 @@ func judge_mesi(judgemesi):
 		return false
 
 func judgment_final(tingimus):
-	if ((tingimus <= 0) and (Dialogic.VAR.judgment.get('õlu') == true) and (Dialogic.VAR.judgment.get('viht') == true) and (Dialogic.VAR.judgment.get('päkapikk') == true) and (Dialogic.VAR.judgment.get('mesi')) == true):
+	if ((tingimus <= 0) and (Dialogic.VAR.judgment.get('õlu') == true) and (Dialogic.VAR.judgment.get('viht') == true) and (Dialogic.VAR.judgment.get('pakapikk') == true) and (Dialogic.VAR.judgment.get('judmesi')) == true):
 		Dialogic.VAR.judgment.set('tingimus', true)
 	else:
 		return false
@@ -66,3 +66,6 @@ func eelminestseen():
 	get_tree().change_scene_to_file("res://main.tscn")
 func järgminestseen():
 	get_tree().change_scene_to_file("res://try_again.tscn")
+func järgminestseen2():
+	Dialogic.start("res://poliisi_sauna.dtl")
+	get_viewport().set_input_as_handled()

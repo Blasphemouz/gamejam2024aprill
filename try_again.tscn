@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr0pt3bl0eqgq"]
+[gd_scene load_steps=3 format=3 uid="uid://dr0pt3bl0eqgq"]
 
 [ext_resource type="Script" path="res://try_again.gd" id="1_at4jp"]
+[ext_resource type="Texture2D" uid="uid://di0xoxbrri0px" path="res://assets/titlescreen/You failed to satisfy Jyrki.png" id="2_xpk3b"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,6 +17,10 @@ grow_vertical = 2
 script = ExtResource("1_at4jp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 13.0
+offset_top = 84.0
+offset_right = 1169.0
+offset_bottom = 727.0
+texture = ExtResource("2_xpk3b")
