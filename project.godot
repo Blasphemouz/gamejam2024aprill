@@ -18,18 +18,20 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogicScript="*res://dialogic_script.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Stats="*res://stats.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
 "Jyrki": "res://assets/dialogic/Jyrki.dch",
-"Jyrki_attorney": "res://assets/dialogic/Jyrki_attorney.dch"
+"Jyrki_attorney": "res://assets/dialogic/Jyrki_attorney.dch",
+"poliisi": "res://assets/politsei/poliisi.dch"
 }
 directories/dtl_directory={
 "dialogic_timeline": "res://assets/dialogic_timeline.dtl",
-"jyrki_judgment_timeline": "res://assets/jyrki/Jyrki_riided/jyrki_judgment_timeline.dtl"
+"jyrki_judgment_timeline": "res://assets/jyrki/Jyrki_riided/jyrki_judgment_timeline.dtl",
+"poliisi_sauna": "res://poliisi_sauna.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"

@@ -1,0 +1,3 @@
+[background arg="res://assets/sauna/saunalantern.png" fade="0.0"]
+join poliisi 1
+i am poliisi

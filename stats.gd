@@ -3,13 +3,13 @@ var päkkapikke = 0
 var kollaseidpäkkapikke = 0
 var siniseidpäkkapikke = 0
 var rohelisipäkkapikke = 0
-var mesi = 1
+var mesi = 0
 var jook = 0
 var vesi = 0
-var lapinkulta = 1
+var lapinkulta = 0
 var viht1 = 0
 var viht2 = 0
-var viht3 = 1
+var viht3 = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
