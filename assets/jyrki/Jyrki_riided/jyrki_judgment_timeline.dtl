@@ -1,0 +1,6 @@
+[background arg="res://assets/cooking sim/kitchen_chat.png" fade="0.0"]
+join Jyrki 2
+[sound path="res://assets/SFX/saunacook/jyrki_smirk.mp3" volume="0.0"]
+Jyrki (jyrki_happy): Time for sauna. Let me see what you make.
+[sound path="res://assets/SFX/saunacook/jyrki_neutral.mp3" volume="0.0"]
+Jyrki (jyrki_neutral): ...

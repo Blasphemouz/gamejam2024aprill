@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c247t3x0oquc2"]
+
+[ext_resource type="Texture2D" uid="uid://brcmq4afn07uu" path="res://assets/cooking sim/kitchen.png" id="1_vcgvk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 650.0
+
+[node name="Kitchen" type="Sprite2D" parent="."]
+position = Vector2(662, 600)
+scale = Vector2(1.19219, 1.65556)
+texture = ExtResource("1_vcgvk")
