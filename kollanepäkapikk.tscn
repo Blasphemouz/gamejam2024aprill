@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://ooh7wb0qrw04"]
+
+[ext_resource type="Script" path="res://Scripts/kollanepäkapikk.gd" id="1_ib2xt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3acf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btvr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76g41"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3uyu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idrbr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bkmuo"]
+load_path = "res://.godot/imported/elf_yellow_pinch1.png-d413d6c700f464761f320c4b21a11151.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gy4he"]
+load_path = "res://.godot/imported/elf_yellow_pinch2.png-a42dbc4472966003fc8047c5da9f33d8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pv8ri"]
+load_path = "res://.godot/imported/elf_yellow_pinch3.png-0900898ebe67c89dadca194650f023fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_btr7b"]
+load_path = "res://.godot/imported/elf_yellow_walk1.png-7c5a0c90132f1dff31a4f3d38453287f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ua6up"]
+load_path = "res://.godot/imported/elf_yellow_walk2.png-7d7d6bb34a98cc5980cf519115a423bc.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vyibv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bkmuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_gy4he")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pv8ri")
+}],
+"loop": true,
+"name": &"Pinch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_btr7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ua6up")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1062.0
+offset_bottom = -534.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.715909, 0.779661)
+script = ExtResource("1_ib2xt")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 96.0
+offset_bottom = 126.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p3acf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_btvr2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_76g41")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3uyu6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_idrbr")
+flat = true
+expand_icon = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(46, 58)
+scale = Vector2(3.84, 2.9)
+sprite_frames = SubResource("SpriteFrames_vyibv")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
