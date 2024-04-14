@@ -3,3 +3,4 @@
 join poliisi 1
 poliisi: I have been waiting for you. We see what you did…
 poliisi: You are inhuman.. It is sin and crime what you do. You will be judged.
+do Stats.järgminestseen("court")

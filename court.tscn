@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjhie6h2c8vhu"]
+[gd_scene load_steps=3 format=3 uid="uid://cvq2iihtwoikv"]
 
-[ext_resource type="Texture2D" uid="uid://vaehm4kd7hbm" path="res://assets/courtroom/court_papers.png" id="1_tnejt"]
+[ext_resource type="Texture2D" uid="uid://deytsp60nyij6" path="res://assets/courtroom/court_papers.png" id="1_tnejt"]
+[ext_resource type="Script" path="res://court.gd" id="1_umd7l"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_umd7l")
 
 [node name="CourtPapers" type="Sprite2D" parent="."]
 position = Vector2(575, 335)
