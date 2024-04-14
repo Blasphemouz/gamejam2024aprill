@@ -24,6 +24,8 @@ var lapinkulta = 0
 
 @onready var spawner = $"."
 
+@onready var pause_menu = $pause_menu
+var paused = false
 # Kursori asjad
 var kursor = load("res://assets/cursor/cursor_grab.png")
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
@@ -53,7 +55,19 @@ func _process(_delta):
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
 	if Input.is_action_just_released("BUTTON_LEFT"):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
+	if Input.is_action_just_pressed("Puase"):
+		pauseMenu()
+
+func pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
 	
+	paused = !paused
+
 func lisamuu(nood):
 	if(nood.name == "honey"):
 		mesi += 1

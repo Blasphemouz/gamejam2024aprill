@@ -1,13 +1,14 @@
-[gd_scene load_steps=30 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=31 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://d3pmby88mtfqv" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://bc5ujn6o5c6js" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://d0uwu08wcushs" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://b0wi8fyggd31p" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://dglsm1mnb8qvo" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://bfe0rtr72cuay" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://b5e0ufoa5sxt7" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://tmjk6calkolh" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://bfsdos7rfx8so" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://bnvncyxo6gdr5" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -101,14 +102,6 @@ offset_top = 354.0
 offset_right = 681.0
 offset_bottom = 412.0
 
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.031
-offset_top = 541.0
-offset_right = 1155.0
-offset_bottom = 621.912
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="jook" type="Button" parent="."]
@@ -192,6 +185,15 @@ offset_top = 473.0
 offset_right = 1015.0
 offset_bottom = 517.0
 text = "EDASI"
+
+[node name="pause_menu" parent="." instance=ExtResource("9_a2btv")]
+visible = false
+layout_mode = 1
+offset_left = 446.0
+offset_top = 140.0
+offset_right = 446.0
+offset_bottom = 140.0
+scale = Vector2(3, 3)
 
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]

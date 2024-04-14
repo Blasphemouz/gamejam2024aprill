@@ -13,6 +13,10 @@ var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 
 # Called when the node enters the scene tree for the first time.
 var rng = RandomNumberGenerator.new()
+
+# paus menüü jaoks
+var paused = true
+
 func _ready():
 	animated_sprite_2d.play("default")
 	rng.randomize()
@@ -37,6 +41,19 @@ func _process(delta):
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
 		p_kapikk.set_position(get_global_mouse_position()+Vector2(-34,-9))
 	
+	# Kui vajutada pausi nuppu 
+	if Input.is_action_just_pressed("Puase"):
+		pauseMenu()
+
+# peidab päkapiku kui paus menüü
+func pauseMenu():
+	if paused:
+		p_kapikk.hide()
+	else:
+		p_kapikk.show()
+	
+	paused = !paused
+
 func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")

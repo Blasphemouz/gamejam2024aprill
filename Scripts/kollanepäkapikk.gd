@@ -13,6 +13,9 @@ var võetud=false
 # Kursori asjad
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
 
+# paus menüü jaoks
+var paused = true
+
 # Called when the node enters the scene tree for the first time.
 var rng = RandomNumberGenerator.new()
 func _ready():
@@ -38,7 +41,18 @@ func _process(delta):
 	else:
 		Input.set_custom_mouse_cursor(kursor_vajutus, Input.CURSOR_ARROW, Vector2(16,16))
 		p_kapikk.set_position(get_global_mouse_position()+Vector2(-38,-10))
-			
+	
+	# Kui vajutada pausi nuppu 
+	if Input.is_action_just_pressed("Puase"):
+		pauseMenu()
+		
+func pauseMenu():
+	if paused:
+		p_kapikk.hide()
+	else:
+		p_kapikk.show()
+	
+	paused = !paused	
 	
 func _on_button_pressed():
 	if(võetud):

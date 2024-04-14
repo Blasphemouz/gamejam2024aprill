@@ -1,4 +1,5 @@
 extends Button
+
 @onready var main = $".."
 @onready var nupp = $"."
 var kaspeal=false
