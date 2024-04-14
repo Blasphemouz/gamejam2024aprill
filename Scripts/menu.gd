@@ -22,7 +22,7 @@ func _process(_delta):
 		Input.set_custom_mouse_cursor(kursor, Input.CURSOR_ARROW, Vector2(16,16))
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://tutorial.tscn")
 
 func _on_exit_pressed():
 	vajutus.play()
@@ -30,6 +30,8 @@ func _on_exit_pressed():
 
 func _on_toutorial_pressed():
 	vajutus.play()
+	if(panel.visible==true):
+		panel.visible=false
 	if tutorialpanel.visible==false:
 		tutorialpanel.visible=true
 	else:
@@ -42,6 +44,8 @@ func _on_exittoutoutorial_pressed():
 		tutorialpanel.visible=false
 
 func _on_settings_pressed():
+	if(tutorialpanel.visible==true):
+		tutorialpanel.visible=false
 	if( panel.visible==false):
 		panel.visible=true
 		vajutus.play()

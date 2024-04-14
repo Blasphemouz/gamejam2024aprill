@@ -1,12 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=21 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
 [ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="2_ljkto"]
 [ext_resource type="Texture2D" uid="uid://qkwignkbpugi" path="res://assets/titlescreen/start.png" id="3_v4y4s"]
+[ext_resource type="Texture2D" uid="uid://dni2bvbydcral" path="res://assets/titlescreen/settingspanel.png" id="4_6ydfc"]
 [ext_resource type="Texture2D" uid="uid://nuqu7x07de0a" path="res://assets/titlescreen/Settings.png" id="4_33yx3"]
 [ext_resource type="AudioStream" uid="uid://crkridwrg1dl0" path="res://assets/SFX/OST - saunatitle (loopable).mp3" id="4_kra35"]
 [ext_resource type="PackedScene" uid="uid://bd4d5slauclpo" path="res://Scripts/volume_slider.tscn" id="5_3p4xw"]
 [ext_resource type="Texture2D" uid="uid://noahbgxu5i8s" path="res://assets/titlescreen/exit.png" id="5_cynq0"]
+[ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://UI/nuppud.png" id="6_4u3r0"]
 [ext_resource type="AudioStream" uid="uid://cy3lke5kc376g" path="res://assets/SFX/UI_select.mp3" id="11_oqsmx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egyg5"]
@@ -27,6 +29,10 @@ corner_radius_bottom_left = 10
 [sub_resource type="Theme" id="Theme_7vt5s"]
 
 [sub_resource type="Theme" id="Theme_7fwsv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kl5oc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kkah"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kptt"]
 
@@ -94,26 +100,36 @@ expand_icon = true
 [node name="Panel" type="Panel" parent="tutorial"]
 visible = false
 layout_mode = 0
-offset_left = -595.0
-offset_top = 128.0
-offset_right = -50.0
-offset_bottom = 454.0
+offset_left = -623.0
+offset_top = 171.0
+offset_right = 27.0
+offset_bottom = 556.0
 
-[node name="Label" type="Label" parent="tutorial/Panel"]
+[node name="TextureRect" type="TextureRect" parent="tutorial/Panel"]
 layout_mode = 0
-offset_left = -2.0
-offset_right = 545.0
-offset_bottom = 328.0
+offset_left = -5.0
+offset_top = -11.0
+offset_right = 665.0
+offset_bottom = 389.0
+texture = ExtResource("4_6ydfc")
+
+[node name="Label" type="Label" parent="tutorial/Panel/TextureRect"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 32.0
+offset_right = 616.0
+offset_bottom = 367.0
 text = "TUTORIAL
 
 
 You are going to a sauna with a renowned Finnish man.
-To impress him, you have to prepare sauna items
+To impress him, you have to prepare the perfect leil
 and prove you are worthy of his sauna.
 
 
-CLICK to pick up and drop ingredients to craft the ideal leil. 
+CLICK to pick up and drop ingredients (including viht) to craft the ideal leil. 
 
+If you are happy with your leil, press FINISH.
 
 Match his tastes and pass his judgment to get to his sauna."
 horizontal_alignment = 1
@@ -142,66 +158,62 @@ expand_icon = true
 [node name="Panel" type="Panel" parent="Settings"]
 visible = false
 layout_mode = 0
-offset_left = 142.0
-offset_top = -153.0
-offset_right = 885.0
-offset_bottom = 298.0
+offset_left = 259.0
+offset_top = -106.0
+offset_right = 813.0
+offset_bottom = 227.0
 theme = SubResource("Theme_7vt5s")
 
-[node name="CheckButton" type="CheckButton" parent="Settings/Panel"]
+[node name="TextureRect" type="TextureRect" parent="Settings/Panel"]
 layout_mode = 0
-offset_left = 291.0
-offset_top = 195.0
-offset_right = 418.0
-offset_bottom = 226.0
+offset_right = 553.0
+offset_bottom = 333.0
+texture = ExtResource("4_6ydfc")
+
+[node name="CheckButton" type="CheckButton" parent="Settings/Panel/TextureRect"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 206.0
+offset_right = 336.0
+offset_bottom = 237.0
 text = "Fullscreen"
 
-[node name="välju" type="Button" parent="Settings/Panel"]
+[node name="välju" type="Button" parent="Settings/Panel/TextureRect"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 646.0
-offset_top = 21.0
-offset_right = 704.0
-offset_bottom = 64.0
+offset_left = 415.0
+offset_top = 1.0
+offset_right = 525.0
+offset_bottom = 82.0
 theme = SubResource("Theme_7fwsv")
+theme_override_colors/icon_normal_color = Color(0.00784314, 0.219608, 0.921569, 1)
+theme_override_colors/icon_pressed_color = Color(0.00784314, 0.619608, 0.701961, 0.690196)
+theme_override_colors/icon_hover_color = Color(0.00784314, 0.635294, 0.690196, 0.615686)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kl5oc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1kkah")
 text = "Back"
+icon = ExtResource("6_4u3r0")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="master" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+[node name="master" parent="Settings/Panel/TextureRect" instance=ExtResource("5_3p4xw")]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 118.0
-offset_right = 516.0
-offset_bottom = 134.0
+offset_left = 100.0
+offset_top = 139.0
+offset_right = 416.0
+offset_bottom = 155.0
 step = 0.001
 value = 1.0
 bus_name = "Master"
 
-[node name="Label" type="Label" parent="Settings/Panel/master"]
+[node name="Label" type="Label" parent="Settings/Panel/TextureRect/master"]
 layout_mode = 0
-offset_left = 131.0
-offset_top = -28.0
-offset_right = 176.0
-offset_bottom = -5.0
+offset_left = 147.0
+offset_top = -45.0
+offset_right = 192.0
+offset_bottom = -22.0
 text = "Audio"
-
-[node name="SFX" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
-visible = false
-layout_mode = 0
-offset_left = 200.0
-offset_top = 208.0
-offset_right = 518.0
-offset_bottom = 224.0
-max_value = 0.0
-bus_name = "SFX"
-
-[node name="Music" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
-visible = false
-layout_mode = 0
-offset_left = 204.0
-offset_top = 285.0
-offset_right = 512.0
-offset_bottom = 301.0
-bus_name = "Music"
 
 [node name="exit" type="Button" parent="."]
 texture_filter = 1
@@ -308,6 +320,6 @@ offset_bottom = 582.0
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Settings/Panel/CheckButton" to="." method="_on_check_button_pressed"]
-[connection signal="pressed" from="Settings/Panel/välju" to="." method="_on_välju_pressed"]
+[connection signal="pressed" from="Settings/Panel/TextureRect/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Settings/Panel/TextureRect/välju" to="." method="_on_välju_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
