@@ -111,10 +111,10 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
 
 [node name="TextureRect" type="TextureRect" parent="Pada"]
 layout_mode = 0
-offset_left = -20.0
-offset_top = -34.0
-offset_right = 211.0
-offset_bottom = 179.0
+offset_left = -42.0
+offset_top = -54.0
+offset_right = 189.0
+offset_bottom = 159.0
 texture = ExtResource("4_ax5vs")
 expand_mode = 2
 stretch_mode = 4
@@ -203,15 +203,6 @@ offset_right = 1015.0
 offset_bottom = 517.0
 text = "EDASI"
 
-[node name="pause_menu" parent="." instance=ExtResource("9_a2btv")]
-visible = false
-layout_mode = 1
-offset_left = 446.0
-offset_top = 140.0
-offset_right = 446.0
-offset_bottom = 140.0
-scale = Vector2(3, 3)
-
 [node name="viht1" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
@@ -262,6 +253,17 @@ icon = ExtResource("13_t2tu5")
 flat = true
 expand_icon = true
 script = ExtResource("3_tfv3r")
+
+[node name="pause_menu" parent="." instance=ExtResource("9_a2btv")]
+visible = false
+visibility_layer = 512
+z_index = 2
+layout_mode = 1
+offset_left = 446.0
+offset_top = 140.0
+offset_right = 446.0
+offset_bottom = 140.0
+scale = Vector2(3, 3)
 
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]
