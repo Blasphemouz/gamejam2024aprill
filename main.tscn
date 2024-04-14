@@ -1,16 +1,18 @@
-[gd_scene load_steps=34 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=36 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://k1w756yixd3k" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://cbsncf1hro565" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://exnwo48w5xwb" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://dedcxynoqyaxo" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
-[ext_resource type="Texture2D" uid="uid://doeavschoyq4c" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://vo0airultsvn" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://cca6mqhfkb2hn" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://brvb3bsk6f0or" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://b40mjglvsc8xd" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
+[ext_resource type="Texture2D" uid="uid://objuw1wytjky" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://d18suy850pyte" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://dtc2dn5s17pct" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
+[ext_resource type="Texture2D" uid="uid://bbxafqnipt7b0" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
+[ext_resource type="Texture2D" uid="uid://cm33h60lef35w" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -108,7 +110,6 @@ offset_bottom = 412.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
 
 [node name="TextureRect" type="TextureRect" parent="Pada"]
-z_index = 1
 layout_mode = 0
 offset_left = -42.0
 offset_top = -54.0
@@ -234,6 +235,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("11_1ep76")
 flat = true
 expand_icon = true
 script = ExtResource("3_tfv3r")
@@ -250,6 +252,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("12_ah7l6")
 flat = true
 expand_icon = true
 script = ExtResource("3_tfv3r")
