@@ -43,7 +43,7 @@ func _process(delta):
 			võetud=false
 			animated_sprite_2d.play("default")
 			if p_kapikk.position.y>get_viewport().get_visible_rect().size.y*0.7-10:
-				p_kapikk.set_position(p_kapikk.position+Vector2(0,-30))
+				p_kapikk.set_position(p_kapikk.position+Vector2(0,-50))
 			if p_kapikk.position.y<get_viewport().get_visible_rect().size.y*0.3+10:
 				p_kapikk.set_position(p_kapikk.position+Vector2(0,30))
 	
