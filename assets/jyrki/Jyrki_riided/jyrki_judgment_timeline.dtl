@@ -32,6 +32,7 @@ if {judgment.judmesi} == true:
 else:
 	[sound path="res://assets/SFX/saunacook/jyrki_think.mp3" volume="0.0"]
 	Jyrki (jyrki_neutral): It not sweet enough.
+[music fade="0.0" volume="0.0"]
 do Stats.judgment_final(0.0)
 if {judgment.tingimus} == false:
 	[sound path="res://assets/SFX/saunacook/jyrki_angry.mp3" volume="0.0"]
