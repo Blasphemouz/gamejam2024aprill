@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kwuhsx0oiscm"]
+[gd_scene load_steps=15 format=3 uid="uid://kwuhsx0oiscm"]
 
 [ext_resource type="Script" path="res://Scripts/rohelinepäkapikk.gd" id="1_7ic3h"]
 [ext_resource type="Texture2D" uid="uid://bxmke564hprli" path="res://assets/elf/elf_green_pinch1.png" id="2_ryl3l"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c4kl8dgyb0hma" path="res://assets/elf/elf_green_pinch3.png" id="4_fs3ca"]
 [ext_resource type="Texture2D" uid="uid://ch545xrrbfvr6" path="res://assets/elf/elf_green_walk1.png" id="5_bviq3"]
 [ext_resource type="Texture2D" uid="uid://ci1ttjlfaabfi" path="res://assets/elf/elf_green_walk2.png" id="6_pdmvl"]
-[ext_resource type="AudioStream" uid="uid://dovprs65y1qfv" path="res://assets/SFX/saunacook/ROHELINE_grabbed.mp3" id="7_d21m7"]
+[ext_resource type="AudioStream" uid="uid://bjrhq35yesarv" path="res://assets/SFX/saunacook/elf_putdown.mp3" id="7_8xois"]
+[ext_resource type="AudioStream" uid="uid://dovprs65y1qfv" path="res://assets/SFX/saunacook/ROHELINE_grabbed.mp3" id="7_iubem"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66r0u"]
 
@@ -51,8 +52,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1093.0
-offset_bottom = -514.0
+
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7ic3h")
@@ -79,7 +79,10 @@ sprite_frames = SubResource("SpriteFrames_8f5xe")
 animation = &"Pinch"
 
 [node name="kraba_roh_p2ka" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_d21m7")
+stream = ExtResource("7_iubem")
+
+[node name="p2ka_putdown" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_8xois")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
