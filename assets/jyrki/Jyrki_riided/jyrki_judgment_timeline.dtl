@@ -1,11 +1,41 @@
+[music path="res://assets/SFX/OST - saunadate (loopable).mp3" fade="0.0" volume="0.0"]
 [background arg="res://assets/cooking sim/kitchen_chat.png" fade="0.0"]
 join Jyrki 2
 [sound path="res://assets/SFX/saunacook/jyrki_smirk.mp3" volume="0.0"]
 Jyrki (jyrki_happy): Time for sauna. Let me see what you make.
-[sound path="res://assets/SFX/saunacook/jyrki_neutral.mp3" volume="0.0"]
 Jyrki (jyrki_neutral): ...
 do Stats.judge_viht(1.0)
 if {judgment.viht} == true:
-	Jyrki: läks sisse
+	[sound path="res://assets/SFX/saunacook/jyrki_smirk.mp3" volume="0.0"]
+	Jyrki (jyrki_happy): Yes, this is best viht. Nice to beat with.
 else:
-	Jyrki: läks läbi
+	[sound path="res://assets/SFX/DATING_Jyrki_neutral.mp3" volume="0.0"]
+	Jyrki (jyrki_neutral): This viht not good to swing. I do not like.
+do Stats.judge_õlu(1.0)
+if {judgment.õlu} == true:
+	[sound path="res://assets/SFX/DATING_Jyrki_flattered.mp3" volume="0.0"]
+	Jyrki (jyrki_disappointed): Mm..! You know your beer. This is very refining quality.
+else:
+	[sound path="res://assets/SFX/DATING_Jyrki_neutral.mp3" volume="0.0"]
+	Jyrki (jyrki_neutral): I don’t like this beer. Not good choice.
+do Stats.judge_päkapikk(1.0)
+if {judgment.pakapikk} == true:
+	[sound path="res://assets/SFX/DATING_Jyrki_happy.mp3" volume="0.0"]
+	Jyrki (jyrki_happy): Ohh.. Good meaty. I like this.
+else:
+	[sound path="res://assets/SFX/saunacook/jyrki_neutral.mp3" volume="0.0"]
+	Jyrki (jyrki_neutral): I think you should try different meat.
+do Stats.judge_mesi(1.0)
+if {judgment.judmesi} == true:
+	[sound path="res://assets/SFX/saunacook/jyrki_smirk.mp3" volume="0.0"]
+	Jyrki (jyrki_disappointed): So sweet. I like smell and taste.
+else:
+	[sound path="res://assets/SFX/saunacook/jyrki_think.mp3" volume="0.0"]
+	Jyrki (jyrki_neutral): It not sweet enough.
+do Stats.judgment_final(0.0)
+if {judgment.tingimus} == false:
+	[sound path="res://assets/SFX/saunacook/jyrki_angry.mp3" volume="0.0"]
+	Jyrki (jyrki_neutral): I think I will make it myself. You are amateur like a virolainen.
+else:
+	[sound path="res://assets/SFX/DATING_Jyrki_happy.mp3" volume="0.0"]
+	Jyrki (jyrki_happy): I like your tastes. You are welcome in my sauna.
