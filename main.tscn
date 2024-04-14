@@ -108,6 +108,7 @@ offset_bottom = 412.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
 
 [node name="TextureRect" type="TextureRect" parent="Pada"]
+z_index = 1
 layout_mode = 0
 offset_left = -42.0
 offset_top = -54.0
