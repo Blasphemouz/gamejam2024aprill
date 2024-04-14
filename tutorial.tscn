@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://b24qdr4got6c3"]
+
+[ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="1_jy3vg"]
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="2_ciljl"]
+[ext_resource type="Texture2D" uid="uid://dni2bvbydcral" path="res://assets/titlescreen/settingspanel.png" id="2_rjuvx"]
+[ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://UI/nuppud.png" id="3_7w741"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wd1wx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lixse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x782a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lmrd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ob4ix"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afl6c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -47.0
+offset_right = 1153.0
+offset_bottom = 700.0
+texture = ExtResource("1_jy3vg")
+script = ExtResource("2_ciljl")
+
+[node name="Button" type="Button" parent="TextureRect"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_wd1wx")
+layout_mode = 0
+offset_left = 920.0
+offset_top = 521.0
+offset_right = 1107.0
+offset_bottom = 635.0
+theme_override_colors/icon_normal_color = Color(0.00392157, 0.219608, 0.917647, 1)
+theme_override_colors/icon_pressed_color = Color(0.00392157, 0.219608, 0.690196, 0.698039)
+theme_override_colors/icon_hover_color = Color(0.00392157, 0.219608, 0.690196, 0.607843)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lixse")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x782a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0lmrd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ob4ix")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_afl6c")
+text = "Continue"
+icon = ExtResource("3_7w741")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 175.0
+offset_right = 817.0
+offset_bottom = 616.0
+texture = ExtResource("2_rjuvx")
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 43.0
+offset_right = 729.0
+offset_bottom = 394.0
+text = "TUTORIAL
+
+
+You are going to a sauna with a renowned Finnish man.
+To impress him, you have to prepare sauna items
+and prove you are worthy of his sauna.
+
+
+CLICK to pick up and drop ingredients to craft the ideal leil. 
+
+
+Match his tastes and pass his judgment to get to his sauna."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect" method="_on_button_pressed"]
