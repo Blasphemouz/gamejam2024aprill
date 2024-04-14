@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://x6lbejmrlk4j"]
 
-[ext_resource type="Texture2D" uid="uid://blp0lbbkkqugh" path="res://assets/cooking sim/kitchen.png" id="1_vcgvk"]
+[ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="1_vcgvk"]
 
 [node name="Node2D" type="Node2D"]
 

@@ -13,5 +13,6 @@ func _process(delta):
 func _input(event):
 	if i == 0 and event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
 		i += 1
+		Dialogic.end_timeline()
 		Dialogic.start('poliisi_sauna')
 		get_viewport().set_input_as_handled()

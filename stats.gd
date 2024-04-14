@@ -64,14 +64,6 @@ func judgment_final(tingimus):
 		return false
 func eelminestseen():
 	get_tree().change_scene_to_file("res://main.tscn")
-<<<<<<< Updated upstream
-func järgminestseen():
-	get_tree().change_scene_to_file("res://try_again.tscn")
-func järgminestseen2():
-	Dialogic.start("res://poliisi_sauna.dtl")
-	get_viewport().set_input_as_handled()
-=======
 func järgminestseen(path):
-	get_tree().change_scene_to_file("res://{path}.tscn")
-	
->>>>>>> Stashed changes
+	get_tree().change_scene_to_file("res://" +path + ".tscn")
+

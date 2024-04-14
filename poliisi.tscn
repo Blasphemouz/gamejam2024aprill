@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg6j5evtagrh"]
+[gd_scene load_steps=4 format=3 uid="uid://cgdddhkh63oe5"]
 
 [ext_resource type="Script" path="res://pressenter.gd" id="1_y6ho6"]
 
@@ -9,9 +9,11 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_crdpm")
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_y6ho6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 offset_right = 1180.0
 offset_bottom = 676.0
 texture = SubResource("GradientTexture2D_garvm")
