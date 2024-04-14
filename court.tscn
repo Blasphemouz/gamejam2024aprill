@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjhie6h2c8vhu"]
+
+[ext_resource type="Texture2D" uid="uid://vaehm4kd7hbm" path="res://assets/courtroom/court_papers.png" id="1_tnejt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CourtPapers" type="Sprite2D" parent="."]
+position = Vector2(575, 335)
+scale = Vector2(1.13672, 0.667969)
+texture = ExtResource("1_tnejt")

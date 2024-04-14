@@ -1,0 +1,237 @@
+[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+join judge 1
+judge (Judge): Court is now in session for the trial of Jyrki’s guest.
+leave --All--
+[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+join jouni (attorney_elf_neutral) 1
+jouni (attorney_elf_angry): I am ready for prosecution, Your Honor.
+leave jouni
+[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+join jyrki_attorney (jyrki_think) 1
+jyrki_attorney (jyrki_talk): Umm.. Defense ready too.
+leave jyrki_attorney
+[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+join judge 1
+judge (Judge_shocked): Jyrki, your conduct during this trial will decide the fate of your client - murder of innocent tonttu elves is a serious client in the Scandinavian region.
+judge (Judge): Be ready to defend your case.
+leave --All--
+[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+join jyrki_attorney (jyrki_think) 1
+jyrki_attorney (jyrki_talk): *gulp* Yes, Your Honor…
+leave jyrki_attorney
+[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+join judge (Judge) 1
+judge (Judge_eyes_closed): Now..
+judge (Judge): First question for the prosecution, Mr. Jouni Jere Jaakkolla?
+leave --All--
+[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+join jouni 1
+jouni (attorney_elf_angry): Yes, Your Honor.
+jouni (attorney_elf_suprised): The victim was spotted by Antti Kivinen, who make his way to Jyrki’s house to deliver his yönkirje.
+jouni (attorney_elf_neutral): Before entering Jyrki house, Mr. Kivinen see the victim murder innocent tonttu when he was approaching the window in the sauna relax area.
+jouni (attorney_elf_angry): After witnessing scene, Antti come to poliisi to report as eyewitness.
+leave --All--
+[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+join judge (Judge) 1
+judge (Judge_eyes_closed): I see.. The court accepts this as evidence.
+judge (Judge): Defense? What do you have to say against the prosecution?
+leave --All--
+[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+join jyrki_attorney 1
+jyrki_attorney (jyrki_think): ...
+- The prosecution statement no good. [if {} == ""]
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni 1
+	jouni (attorney_elf_suprised): ??
+	jouni (attorney_elf_neutral): Jyrki, you defend this?
+	jouni (attorney_elf_angry): And like this?
+	jouni (attorney_elf_neutral): You fall far…….. (ᇂ_Jᇂ )
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	judge (Judge): The prosecution is correct, Jyrki. This does not prove any sort of point.
+	judge (Judge_shocked): Let us move on with the trial. 
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_angry) 1
+	jouni (attorney_elf_neutral): Yes, let us.......
+	leave 
+- Uhrini on syytön, vannon kunnianne, asian käsittelyssä on tapahtunut väärinkäsitys.
+	leave jyrki_attorney
+	[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+	join jouni (attorney_elf_suprised) 1
+	jouni (attorney_elf_neutral): Niin? Mitä todisteita on tätä ennennäkemätöntä viattomien henkien murhaa vastaan?
+	leave --All--
+	[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+	join jyrki_attorney (jyrki_think) 1
+	...
+	- Näin uhrin tekevän murhat silmieni edessä. Säästä minut tästä lauseesta ja anna minun mennä.
+		leave --All--
+		[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+		join jouni (attorney_elf_neutral) 1
+		jouni (attorney_elf_angry): Tämä ei todista mitään, kunnianne. Jatketaan oikeudessa.
+		leave --All--
+		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+		join judge 1
+		judge (Judge_eyes_closed): Kyllä, mutta tällä kertaa englanniksi, jotta uhri ymmärtää tuomionsa.
+		leave --All--
+		[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+		join jouni 1
+		jouni (attorney_elf_suprised): Kyllä, teidän kunnianne. (ノ-_-)ノ ミ ┴┴
+		leave --All--
+		set {points} -= 1
+	- Olin huoneessa, joka katsoi suoraan paikkaan, jossa herra Kivinen olisi nähnyt tapahtuman, eikä häntä nähty.
+		leave --All--
+		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+		join judge 1
+		judge (Judge_eyes_closed): Vaikka se on kunnollinen argumentti, en usko, että se todistaa paljoa, Jyrki.
+		leave --All--
+		[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+		join jouni (attorney_elf_suprised) 1
+		jouni (attorney_elf_neutral): Tämä ei todista mitään, kunnianne. Jatketaan oikeudessa.
+		leave --All--
+		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+		join judge 1
+		judge (Judge_shocked): Kyllä, mutta tällä kertaa englanniksi, jotta uhri ymmärtää tuomionsa. 
+		leave --All--
+		[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+		join jouni (attorney_elf_neutral) 1
+		jouni (attorney_elf_angry): Kyllä, teidän kunnianne.
+		leave --All--
+	- Todistajallani on ollut kauna minulle päiväkodista asti, hänen todistustaan ​​ei voida pitää tapahtumien tarkana perustana.
+		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+		join judge (Judge) 1
+		judge (Judge_eyes_closed): Ja mikä tämä syy on todistajalle?
+		leave --All--
+		[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+		join jyrki_attorney (jyrki_attorney) 1
+		set {points} += 2
+		jyrki_attorney (jyrki_think): ...
+		- Huhtikuun 12. päivänä 2024 tapahtuneen tapauksen aiheutti hän, ja sanoin yhdelle henkilölle, ettei minun olisi pitänyt.
+			leave --All--
+			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+			join jouni 1
+			jouni (attorney_elf_angry): ... Näen. Se on todellakin epäilyttävää...
+			leave --All--
+			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+			join judge 1
+			judge (Judge_eyes_closed): Syyttäjä, jatka todistustasi, mutta englanniksi, jotta uhri ymmärtää tuomionsa.
+			leave --All--
+			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+			join jouni 1
+			jouni (attorney_elf_angry): Kuten haluatte, teidän kunnianne.
+			leave --All--
+		- Minun täytyi pakottaa hänet pois laittomasta goblin-jauheen huumekaupasta, ja hän on ollut minulle vihainen.
+			jyrki_attorney (jyrki_attorney): *shows picture of Antti’s illegal trade* 
+			leave --All--
+			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+			join judge (Judge_shocked) 1
+			judge (Judge_shocked): !!!
+			leave 
+			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+			join jouni 1
+			jouni (attorney_elf_angry): !!!
+			leave --All--
+		- Olin suhteessa hänen kanssaan ja hän on vihainen minulle.
+			leave --All--
+			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+			join judge (Judge) 1
+			judge (Judge_eyes_closed): ..Jyrki, vaikka se on henkilökohtainen syy, en usko, että herra Kivinen menisi niin pitkälle kostoyrityksessä.
+			leave --All--
+			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+			join jouni 1
+			jouni (attorney_elf_angry): Tämä ei todista mitään, kunnianne. Jatketaan oikeudessa.
+			leave --All--
+			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+			join judge 1
+			jouni (attorney_elf_suprised): Kyllä, mutta tällä kertaa englanniksi, jotta uhri ymmärtää tuomionsa.
+			leave --All--
+			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+			join jouni 1
+			jouni (attorney_elf_neutral): Kyllä, teidän kunnianne.
+			leave --All--
+			set {points} -= 1
+- *start beatboxing*
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge 1
+	judge (Judge_shocked): !!!
+	leave --All--
+	[background fade="0.0"]
+	join jouni (attorney_elf_neutral) 1
+	jouni (attorney_elf_suprised): !!!
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	judge (Judge): Wow, Jyrki. That is really good beatboxing.
+	judge (Judge_eyes_closed): I’ve always liked this side of yours.
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_angry) 1
+	jouni (attorney_elf_neutral): ?????????
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge 1
+	Let us proceed with the trial.
+	leave --All--
+	set {points} = 2
+- While crime occur in my house, I have not had tonttu in my house for years.
+	jyrki_attorney (jyrki_angry_smirk): I fix house with permit and no tonttu come. Judge also know this.
+	leave jyrki_attorney
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	judge (Judge): ..The defense is correct. It does not add up.
+	judge (Judge): There is a lapse in the prosecution’s judgment.
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_angry) 1
+	jouni (attorney_elf_neutral): >\:(
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge 1
+	judge (Judge_shocked): Let us move on with the trial.
+	leave --All--
+[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+join jouni (attorney_elf_neutral) 1
+jouni (attorney_elf_angry): There is also recent case that good proof that Jyrki guilty.
+jouni (attorney_elf_suprised): Tonttu colony move near Jyrki house last week under Finland immigration policy. 
+jouni (attorney_elf_neutral): But building still incomplete, so tonttu might have go to Jyrki house by accident.
+jouni (attorney_elf_angry): That’s when the victim murdered my kind!! In cold blood… >\:(\
+
+leave --All--
+[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+join judge 1
+judge (Judge_eyes_closed): I see, this is rather convincing evidence.
+judge (Judge_shocked): What do you have to say in defense to the prosecution, Jyrki?
+leave --All--
+[background arg="res://assets/courtroom/court_table.png" fade="0.0"]
+join jyrki_attorney 1
+jyrki_attorney (jyrki_angry): ...
+- Tonttu colonies are 2.6km away. No way they can be in Jyrki house.
+- Uh whuhh ??.. ; =,..
+- I still no believe Antti rat me out.
+- *throw leil at Jouni Jere Jakkolla*
+	[sound path="res://assets/SFX/leil_1.mp3" volume="0.0"]
+	jyrki_attorney (jyrki_angry_smirk): *Jyrki throws leil at Jouni*
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_neutral) 1
+	jouni (attorney_elf_angry): 2P kjö2Q3Ä \:;  “KO\:_.öaWr i)
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_shocked) 1
+	judge (Judge_shocked): !!! 
+	judge (Judge): Wow.
+	[sound path="res://assets/SFX/goodleil.mp3" volume="0.0"]
+	judge (Judge_eyes_closed): Good leil!
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_suprised) 1
+	jouni (attorney_elf_neutral): ????????????
+	jouni (attorney_elf_suprised): I should have become attorney in Norway.
+	leave jouni
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	judge (Judge): Let us move on with the case.
+	set {points} += 1

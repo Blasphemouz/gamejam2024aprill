@@ -26,9 +26,13 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Jyrki": "res://assets/dialogic/Jyrki.dch",
 "Jyrki_attorney": "res://assets/dialogic/Jyrki_attorney.dch",
+"jouni": "res://assets/Attorney_elf/jouni.dch",
+"judge": "res://assets/courtroom/judge.dch",
+"jyrki_attorney": "res://assets/jyrki/Jyrki_attorney/jyrki_attorney.dch",
 "poliisi": "res://assets/politsei/poliisi.dch"
 }
 directories/dtl_directory={
+"court_timeline": "res://court_timeline.dtl",
 "dialogic_timeline": "res://assets/dialogic_timeline.dtl",
 "jyrki_judgment_timeline": "res://assets/jyrki/Jyrki_riided/jyrki_judgment_timeline.dtl",
 "poliisi_sauna": "res://poliisi_sauna.dtl"
@@ -42,7 +46,8 @@ variables={
 "tingimus": false,
 "viht": false,
 "õlu": false
-}
+},
+"points": 0
 }
 glossary/default_case_sensitive=true
 text/letter_speed=0.01
