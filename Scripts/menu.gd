@@ -42,12 +42,14 @@ func _on_exittoutoutorial_pressed():
 		tutorialpanel.visible=false
 
 func _on_settings_pressed():
+	vajutus.play()
 	if( panel.visible==false):
 		panel.visible=true
 	else:
 		panel.visible=false
 
 func _on_välju_pressed():
+	vajutus.play()
 	if( panel.visible==true):
 		panel.visible=false
 	else:

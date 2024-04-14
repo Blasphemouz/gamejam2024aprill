@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=17 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
 [ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="2_ljkto"]
@@ -20,13 +20,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm2jf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rc6xt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4skm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfr1o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqm4m"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wly01"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uab3"]
 
@@ -139,10 +133,7 @@ offset_bottom = 38.851
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_rc6xt")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_e4skm")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_wfr1o")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_yqm4m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wly01")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8uab3")
 icon = ExtResource("4_33yx3")
 flat = true
@@ -315,7 +306,7 @@ offset_right = 198.0
 offset_bottom = 582.0
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Settings/Panel/CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Settings/Panel/välju" to="." method="_on_välju_pressed"]
