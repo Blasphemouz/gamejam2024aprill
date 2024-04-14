@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://6ihbxeh3d764"]
+[gd_scene load_steps=15 format=3 uid="uid://cnr2ksn8n6ayy"]
 
 [ext_resource type="Script" path="res://Scripts/sininepäkapikk.gd" id="1_img23"]
-[ext_resource type="Texture2D" uid="uid://dix6nslsh1s7n" path="res://assets/elf/elf_blue_pinch1.png" id="2_nfw5m"]
-[ext_resource type="Texture2D" uid="uid://de3neyinqjpmv" path="res://assets/elf/elf_blue_pinch2.png" id="3_b2ytk"]
-[ext_resource type="Texture2D" uid="uid://bmueh253lm7h4" path="res://assets/elf/elf_blue_pinch3.png" id="4_y8ar5"]
+[ext_resource type="Texture2D" uid="uid://ibsyd4uw4bcf" path="res://assets/elf/elf_blue_pinch1.png" id="2_nfw5m"]
+[ext_resource type="Texture2D" uid="uid://dw7ovj2wyrnyd" path="res://assets/elf/elf_blue_pinch2.png" id="3_b2ytk"]
+[ext_resource type="Texture2D" uid="uid://de3awhhwbl2it" path="res://assets/elf/elf_blue_pinch3.png" id="4_y8ar5"]
 [ext_resource type="Texture2D" uid="uid://r8ki8o1cjtrg" path="res://assets/elf/elf_blue_walk1.png" id="5_xou12"]
 [ext_resource type="Texture2D" uid="uid://bvwcupvifwqru" path="res://assets/elf/elf_blue_walk2.png" id="6_epu80"]
+[ext_resource type="AudioStream" uid="uid://cdlo185oy5ks7" path="res://assets/SFX/saunacook/SININE_grabbed.mp3" id="7_30tew"]
+[ext_resource type="AudioStream" uid="uid://bjrhq35yesarv" path="res://assets/SFX/saunacook/elf_putdown.mp3" id="8_snbv0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_676gm"]
 
@@ -73,6 +75,14 @@ texture_filter = 1
 position = Vector2(46.18, 48)
 scale = Vector2(3.86118, 2.46667)
 sprite_frames = SubResource("SpriteFrames_om46m")
+
+[node name="kraba_sini_p2ka" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_30tew")
+
+[node name="p2ka_putdown" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_snbv0")
+
+[node name="p2ka_potti" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
