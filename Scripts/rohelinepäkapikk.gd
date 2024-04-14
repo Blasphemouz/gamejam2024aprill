@@ -8,7 +8,7 @@ var võetud=false
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var kraba_roh_p2ka = $"kraba_roh_p2ka"
-#@onready var p2ka_putdown = $"p2ka_putdown"
+@onready var p2ka_putdown = $"p2ka_putdown"
 
 # Kursori asjad
 var kursor_vajutus = load("res://assets/cursor/cursor_grabbing.png")
@@ -55,7 +55,7 @@ func pauseMenu():
 func _on_button_pressed():
 	if(võetud):
 		animated_sprite_2d.play("default")
-		#p2ka_putdown.play()
+		p2ka_putdown.play()
 		if(p_kapikk.get_parent().getpada()):
 			p_kapikk.get_parent().lisarohelinepäkapikk()
 			kustuta()
