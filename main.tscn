@@ -1,16 +1,19 @@
-[gd_scene load_steps=31 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=33 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://bc5ujn6o5c6js" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://dtxxgua3npesk" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://b5e0ufoa5sxt7" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://tmjk6calkolh" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://bfsdos7rfx8so" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://bnvncyxo6gdr5" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://bjhnm2rwmax2s" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://csdgq714fmu4v" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
+[ext_resource type="Texture2D" uid="uid://qb58ijjrvu8l" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://n5ng7px76ib7" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://byjwht3hwxs0j" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glluq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slecx"]
 
@@ -98,9 +101,20 @@ offset_bottom = 39.0
 process_mode = 3
 layout_mode = 0
 offset_left = 531.0
-offset_top = 354.0
+offset_top = 275.0
 offset_right = 681.0
 offset_bottom = 412.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
+
+[node name="TextureRect" type="TextureRect" parent="Pada"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -34.0
+offset_right = 211.0
+offset_bottom = 179.0
+texture = ExtResource("4_ax5vs")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
