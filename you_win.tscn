@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://diec0m7jq1tk6"]
+[gd_scene load_steps=6 format=3 uid="uid://diec0m7jq1tk6"]
 
-[ext_resource type="Texture2D" uid="uid://bhh7e6ceyuxlo" path="res://assets/cooking sim/saunawin.png" id="1_snjdt"]
+[ext_resource type="Texture2D" uid="uid://dopngrqw2rsdj" path="res://assets/cooking sim/saunawin.png" id="1_snjdt"]
 [ext_resource type="Script" path="res://you_win.gd" id="1_twuuh"]
+[ext_resource type="AudioStream" uid="uid://cgbkc3uuv5n3d" path="res://assets/SFX/saunacook/saunaleil.mp3" id="3_pxliw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ijd0"]
 font_size = 28
@@ -47,9 +48,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Press Enter" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 336.0
 offset_top = 480.0
 offset_right = 821.0
 offset_bottom = 525.0
 text = "Press Enter to go to Main Menu"
 label_settings = SubResource("LabelSettings_57666")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pxliw")
+autoplay = true

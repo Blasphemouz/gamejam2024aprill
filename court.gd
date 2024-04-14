@@ -16,6 +16,7 @@ func lose():
 	
 func win():
 	get_tree().change_scene_to_file("res://Objektid/you_win.tscn")
+
 func _input(event):
 	if i == 0 and event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
 		i += 1
