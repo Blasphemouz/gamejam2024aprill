@@ -51,7 +51,7 @@ jyrki_attorney (jyrki_think): ...
 	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 	join judge (Judge_eyes_closed) 1
 	judge (Judge): The prosecution is correct, Jyrki. This does not prove any sort of point.
-	judge (Judge_shocked): Let us move on with the trial. 
+	judge (Judge_shocked): Let us move on with the trial.
 	leave --All--
 	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 	join jouni (attorney_elf_angry) 1
@@ -93,7 +93,7 @@ jyrki_attorney (jyrki_think): ...
 		leave --All--
 		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 		join judge 1
-		judge (Judge_shocked): Kyllä, mutta tällä kertaa englanniksi, jotta uhri ymmärtää tuomionsa. 
+		judge (Judge_shocked): Kyllä, mutta tällä kertaa englanniksi, jotta uhri ymmärtää tuomionsa.
 		leave --All--
 		[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 		join jouni (attorney_elf_neutral) 1
@@ -123,12 +123,12 @@ jyrki_attorney (jyrki_think): ...
 			jouni (attorney_elf_angry): Kuten haluatte, teidän kunnianne.
 			leave --All--
 		- Minun täytyi pakottaa hänet pois laittomasta goblin-jauheen huumekaupasta, ja hän on ollut minulle vihainen.
-			jyrki_attorney (jyrki_attorney): *shows picture of Antti’s illegal trade* 
+			jyrki_attorney (jyrki_attorney): *shows picture of Antti’s illegal trade*
 			leave --All--
 			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 			join judge (Judge_shocked) 1
 			judge (Judge_shocked): !!!
-			leave 
+			leave --All--
 			[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 			join jouni 1
 			jouni (attorney_elf_angry): !!!
@@ -195,10 +195,9 @@ jyrki_attorney (jyrki_think): ...
 [background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 join jouni (attorney_elf_neutral) 1
 jouni (attorney_elf_angry): There is also recent case that good proof that Jyrki guilty.
-jouni (attorney_elf_suprised): Tonttu colony move near Jyrki house last week under Finland immigration policy. 
+jouni (attorney_elf_suprised): Tonttu colony move near Jyrki house last week under Finland immigration policy.
 jouni (attorney_elf_neutral): But building still incomplete, so tonttu might have go to Jyrki house by accident.
 jouni (attorney_elf_angry): That’s when the victim murdered my kind!! In cold blood… >\:(\
-
 leave --All--
 [background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 join judge 1
@@ -208,9 +207,30 @@ leave --All--
 [background arg="res://assets/courtroom/court_table.png" fade="0.0"]
 join jyrki_attorney 1
 jyrki_attorney (jyrki_angry): ...
-- Tonttu colonies are 2.6km away. No way they can be in Jyrki house.
 - Uh whuhh ??.. ; =,..
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_neutral) 1
+	jouni (attorney_elf_suprised): Herranjumala.. I am sorry Jyrki. 
+	jouni (attorney_elf_angry): It confusing when you are losing
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	[sound path="res://assets/SFX/saunacook/COURT_hammer_slam.mp3" volume="0.0"]
+	judge (Judge_shocked): *slams hammer* No hostility in court!!
+	judge (Judge): However this is an important case, Jyrki. I advise you to take this seriously. 
+	judge (Judge_eyes_closed): Now then…
+	set {points} -= 2
 - I still no believe Antti rat me out.
+	leave --All--
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_shocked) 1
+	!!!
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni 1
+	jouni (attorney_elf_suprised): !!!
+	leave --All--
 - *throw leil at Jouni Jere Jakkolla*
 	[sound path="res://assets/SFX/leil_1.mp3" volume="0.0"]
 	jyrki_attorney (jyrki_angry_smirk): *Jyrki throws leil at Jouni*
@@ -221,7 +241,7 @@ jyrki_attorney (jyrki_angry): ...
 	leave --All--
 	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 	join judge (Judge_shocked) 1
-	judge (Judge_shocked): !!! 
+	judge (Judge_shocked): !!!
 	judge (Judge): Wow.
 	[sound path="res://assets/SFX/goodleil.mp3" volume="0.0"]
 	judge (Judge_eyes_closed): Good leil!
@@ -235,3 +255,31 @@ jyrki_attorney (jyrki_angry): ...
 	join judge (Judge_eyes_closed) 1
 	judge (Judge): Let us move on with the case.
 	set {points} += 1
+judge (Judge_shocked): The court has reached a verdict.
+judge (Judge): *slams hammer* …
+judge (Judge_eyes_closed): Judging the side of the prosecution and defendant…
+if {points} <= 4:
+	judge (Judge_eyes_closed): The defendant is innocent.
+	leave --All--
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_angry) 1
+	jouni (attorney_elf_neutral): What..?! 
+	jouni (attorney_elf_angry): Jyrki’s guest killed my kind!!
+	jouni (attorney_elf_suprised): This can’t be happening… 
+	leave jouni
+	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
+	join judge (Judge_eyes_closed) 1
+	judge: The defense brought up a good case. There is nothing more to discuss.
+else:
+	judge (Judge_eyes_closed): The defendant is guilty.
+	leave 
+	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
+	join jouni (attorney_elf_neutral) 1
+	jouni (attorney_elf_neutral): Haha!
+	leave --All--
+	[background fade="0.0"]
+	join judge (Judge) 1
+	judge (Judge_eyes_closed): The prosecution brought up a good case. The results of the trial are unanimous.
+	judge (Judge): Jyrki’s guest is sentenced to life in Anne saun.
+	judge (Judge_eyes_closed): This decision is final.
+	do Stats
