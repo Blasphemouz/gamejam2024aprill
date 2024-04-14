@@ -42,6 +42,7 @@ func judge_õlu(õlu):
 		return false
 	
 func judge_viht(viht):
+	print(viht3)
 	if viht >= viht3:
 		Dialogic.VAR.judgment.set('viht', true)
 	else:
