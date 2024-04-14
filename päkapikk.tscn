@@ -87,6 +87,8 @@ position = Vector2(46, 58)
 scale = Vector2(3.84, 3.274)
 sprite_frames = SubResource("SpriteFrames_aom6g")
 
+[node name="kraba_punane_p2ka" type="AudioStreamPlayer" parent="."]
+
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

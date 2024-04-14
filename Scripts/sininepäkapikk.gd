@@ -7,7 +7,7 @@ var võetud=false
 @onready var p_kapikk = $"."
 @onready var button = $Button
 @onready var animated_sprite_2d = $AnimatedSprite2D
-#@onready var kraba_sini_p2ka = $"kraba_sini_p2ka"
+@onready var kraba_sini_p2ka = $"kraba_sini_p2ka"
 #@onready var p2ka_putdown = $"p2ka_putdown"
 
 # Kursori asjad
