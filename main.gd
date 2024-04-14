@@ -25,6 +25,7 @@ var viht1 = 0
 var viht2 = 0
 var viht3 = 0
 
+@onready var audio = $audio
 @onready var spawner = $"."
 @onready var pause_menu = $pause_menu
 var paused = false
@@ -237,3 +238,10 @@ func _on_viht_3_mouse_entered():
 
 func _on_viht_3_mouse_exited():
 	$viht3/viht3Desc.visible = false
+
+
+func _on_audio_pressed():
+	if(audio.get_child(0).visible==true):
+		audio.get_child(0).visible=false
+	else:
+		audio.get_child(0).visible=true

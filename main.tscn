@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=56 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
@@ -24,6 +24,9 @@
 [ext_resource type="AudioStream" uid="uid://chjblseq3k72p" path="res://assets/SFX/saunacook/tonttu_slaughter.mp3" id="17_0577t"]
 [ext_resource type="Texture2D" uid="uid://ccq0t1xpee74b" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
 [ext_resource type="AudioStream" uid="uid://17np3uwerx8w" path="res://assets/SFX/saunacook/saunacook (loopable).mp3" id="19_yc4ki"]
+[ext_resource type="Texture2D" uid="uid://dni2bvbydcral" path="res://assets/titlescreen/settingspanel.png" id="20_gfb11"]
+[ext_resource type="PackedScene" uid="uid://bd4d5slauclpo" path="res://Scripts/volume_slider.tscn" id="21_v1fy1"]
+[ext_resource type="Texture2D" uid="uid://s8m1nem2o3xn" path="res://UI/speaker (1).svg" id="25_32fb3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -78,6 +81,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtixj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ba0lh"]
+
+[sub_resource type="Theme" id="Theme_4m7uv"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -446,6 +451,75 @@ stretch_mode = 4
 stream = ExtResource("19_yc4ki")
 autoplay = true
 
+[node name="audio" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+offset_left = 18.0
+offset_top = 4.0
+offset_right = 70.0
+offset_bottom = 55.0
+icon = ExtResource("25_32fb3")
+flat = true
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="audio"]
+visible = false
+layout_mode = 1
+offset_left = 65.0
+offset_top = 18.0
+offset_right = 619.0
+offset_bottom = 110.0
+theme = SubResource("Theme_4m7uv")
+
+[node name="TextureRect" type="TextureRect" parent="audio/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.5
+offset_top = -54.0
+offset_right = 276.5
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_gfb11")
+
+[node name="master" parent="audio/Panel/TextureRect" instance=ExtResource("21_v1fy1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -16.5
+offset_right = 160.0
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.001
+value = 1.0
+bus_name = "Master"
+
+[node name="Label" type="Label" parent="audio/Panel/TextureRect/master"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Audio"
+
 [connection signal="mouse_entered" from="jook" to="." method="_on_jook_mouse_entered"]
 [connection signal="mouse_exited" from="jook" to="." method="_on_jook_mouse_exited"]
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
@@ -470,3 +544,4 @@ autoplay = true
 [connection signal="pressed" from="viht3" to="viht3" method="_on_pressed"]
 [connection signal="timeout" from="GoodBeerTimer" to="." method="_on_good_beer_timer_timeout"]
 [connection signal="timeout" from="GoodSlaughterTimer" to="." method="_on_good_slaughter_timer_timeout"]
+[connection signal="pressed" from="audio" to="." method="_on_audio_pressed"]
