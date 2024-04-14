@@ -83,10 +83,9 @@ expand_icon = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(51.8971, 67.6667)
-scale = Vector2(4.00823, 3.41667)
+position = Vector2(46, 58)
+scale = Vector2(3.84, 3.274)
 sprite_frames = SubResource("SpriteFrames_aom6g")
-animation = &"Pinch"
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
