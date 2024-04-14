@@ -1,23 +1,23 @@
 [gd_scene load_steps=41 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://blp0lbbkkqugh" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://daapmkxclt3qv" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://dkhim08wclatg" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://d34op8jfdp5bs" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
-[ext_resource type="Texture2D" uid="uid://dsvalclptt4r5" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://cjpfdudssgvvm" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://cyokxjdly3rdt" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://b5ewqn0mo513o" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://bdowkfkn55e0p" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
+[ext_resource type="Texture2D" uid="uid://cmmbcl38hyb3y" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://70yvjcip45lm" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://bg8if76j72g8" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
-[ext_resource type="Texture2D" uid="uid://dsgwgcgyqnfmx" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
+[ext_resource type="Texture2D" uid="uid://b6y0waxqqhjbt" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
-[ext_resource type="Texture2D" uid="uid://djga1j6j3h0j5" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
-[ext_resource type="Texture2D" uid="uid://p34g246calun" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
+[ext_resource type="Texture2D" uid="uid://biscq2vqnnjmt" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
+[ext_resource type="Texture2D" uid="uid://b6edjkjbgtilq" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
 [ext_resource type="Script" path="res://stats.gd" id="14_u0ghg"]
 [ext_resource type="AudioStream" uid="uid://cseae7mrsanfn" path="res://assets/SFX/saunacook/promill_leil.mp3" id="16_udbwl"]
 [ext_resource type="AudioStream" uid="uid://chjblseq3k72p" path="res://assets/SFX/saunacook/tonttu_slaughter.mp3" id="17_0577t"]
-[ext_resource type="Texture2D" uid="uid://c1jiyqhq0tqsa" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
+[ext_resource type="Texture2D" uid="uid://blj4fhd2vlwqt" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -154,7 +154,7 @@ offset_top = -37.0
 offset_right = 226.0
 offset_bottom = 43.0
 bbcode_enabled = true
-text = "A beer from a neighbor country. A light beverage."
+text = "[bgcolor=#00000060][color=yellow]A beer from a neighbor country. A light beverage.[/color][/bgcolor]"
 
 [node name="vesi" type="Button" parent="."]
 z_index = 1
@@ -185,7 +185,7 @@ offset_top = -56.0
 offset_right = 240.0
 offset_bottom = 9.0
 bbcode_enabled = true
-text = "[color=blue] Good Finnish water. A nice beverage and great for leil."
+text = "[bgcolor=#00000060][color=blue]Good Finnish water. A nice beverage and great for leil.[/color][/bgcolor]"
 
 [node name="honey" type="Button" parent="."]
 z_index = 1
@@ -213,7 +213,7 @@ offset_top = -21.0
 offset_right = 227.0
 offset_bottom = 34.0
 bbcode_enabled = true
-text = "Finnish honey. Gives off a sweet taste and aroma."
+text = "[bgcolor=#00000060][color=orange]Finnish honey. Gives off a sweet taste and aroma.[/color][/bgcolor]"
 
 [node name="lapinkulta" type="Button" parent="."]
 texture_filter = 1
@@ -240,8 +240,8 @@ offset_top = -47.0
 offset_right = 204.0
 offset_bottom = 8.0
 bbcode_enabled = true
-text = "A Finnish beer. Has heavy promill.
-"
+text = "[bgcolor=#00000060][color=yellow]A Finnish beer. Has heavy promill.[/color]
+[/bgcolor]"
 
 [node name="järgminestseen" type="Button" parent="."]
 texture_filter = 1
@@ -250,7 +250,7 @@ offset_left = 880.0
 offset_top = 473.0
 offset_right = 1015.0
 offset_bottom = 517.0
-text = "EDASI"
+text = "FINISH"
 
 [node name="viht1" type="Button" parent="."]
 texture_filter = 1
@@ -272,12 +272,14 @@ script = ExtResource("3_tfv3r")
 [node name="viht1Desc" type="RichTextLabel" parent="viht1"]
 visible = false
 layout_mode = 0
-offset_left = -38.0
-offset_top = 160.0
-offset_right = 126.0
-offset_bottom = 214.0
+offset_left = -35.0
+offset_top = 131.0
+offset_right = 151.0
+offset_bottom = 210.0
 bbcode_enabled = true
-text = "A birch viht. Good to swing.
+text = "[bgcolor=#00000060][color=green]
+A birch viht. Good to swing.
+[/color][/bgcolor]
 "
 
 [node name="viht2" type="Button" parent="."]
@@ -303,9 +305,9 @@ layout_mode = 0
 offset_left = -84.0
 offset_top = 161.0
 offset_right = 133.0
-offset_bottom = 201.0
+offset_bottom = 260.0
 bbcode_enabled = true
-text = "A viht made of eucalyptus. Quite heavy to swing."
+text = "[bgcolor=#00000060][color=green]A viht made of eucalyptus. Quite heavy to swing.[/color][/bgcolor]"
 
 [node name="viht3" type="Button" parent="."]
 texture_filter = 1
@@ -325,14 +327,14 @@ expand_icon = true
 script = ExtResource("3_tfv3r")
 
 [node name="viht3Desc" type="RichTextLabel" parent="viht3"]
-visible = false
 layout_mode = 0
 offset_left = -37.0
 offset_top = 151.0
 offset_right = 107.0
 offset_bottom = 244.0
 bbcode_enabled = true
-text = "A viht made of linden branches. Surprisingly light to swing."
+text = "[bgcolor=#00000060][color=green]A viht made of linden branches. Surprisingly light to swing.
+[/color][/bgcolor]"
 
 [node name="pause_menu" parent="." instance=ExtResource("9_a2btv")]
 visible = false
