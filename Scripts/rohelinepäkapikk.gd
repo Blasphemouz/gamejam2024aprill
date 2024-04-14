@@ -63,7 +63,7 @@ func _on_button_pressed():
 		võetud=false
 	else:
 		animated_sprite_2d.play("Pinch")
-		#kraba_roh_p2ka.play()
+		kraba_roh_p2ka.play()
 		võetud=true
 	
 func kustuta():

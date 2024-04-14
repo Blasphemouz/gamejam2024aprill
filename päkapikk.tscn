@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://db7ivbc6si385"]
+[gd_scene load_steps=14 format=3 uid="uid://db7ivbc6si385"]
 
 [ext_resource type="Script" path="res://Scripts/päkapikk.gd" id="1_iuaw0"]
+[ext_resource type="AudioStream" uid="uid://c4qsxcdf5uqxd" path="res://assets/SFX/saunacook/PUNANE_grabbed.mp3" id="2_dwcuf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4177h"]
 
@@ -88,6 +89,7 @@ scale = Vector2(3.84, 3.274)
 sprite_frames = SubResource("SpriteFrames_aom6g")
 
 [node name="kraba_punane_p2ka" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_dwcuf")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

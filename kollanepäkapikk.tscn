@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ooh7wb0qrw04"]
+[gd_scene load_steps=14 format=3 uid="uid://ooh7wb0qrw04"]
 
 [ext_resource type="Script" path="res://Scripts/kollanepäkapikk.gd" id="1_ib2xt"]
+[ext_resource type="AudioStream" uid="uid://cl3c3176xtavo" path="res://assets/SFX/saunacook/KOLLANE_grabbed.mp3" id="2_8br7a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3acf"]
 
@@ -88,6 +89,7 @@ scale = Vector2(3.84, 2.9)
 sprite_frames = SubResource("SpriteFrames_vyibv")
 
 [node name="kraba_kollane_p2ka" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8br7a")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

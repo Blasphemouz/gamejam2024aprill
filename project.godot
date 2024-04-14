@@ -21,8 +21,12 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Jyrki_attorney": "res://assets/dialogic/Jyrki_attorney.dch"
+}
+directories/dtl_directory={
+"dialogic_timeline": "res://assets/dialogic_timeline.dtl"
+}
 layout/style_list=[]
 layout/default_style="Default"
 
