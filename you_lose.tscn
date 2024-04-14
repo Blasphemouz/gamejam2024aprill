@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccoe6bxhywgf7"]
+
+[ext_resource type="Texture2D" uid="uid://u177unkd0luf" path="res://assets/cooking sim/saunalose.png" id="1_t2d04"]
+[ext_resource type="Script" path="res://you_lose.gd" id="1_wiup1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nhmt5"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqw75"]
+font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wiup1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1158.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Saunalose" type="Sprite2D" parent="ColorRect"]
+position = Vector2(581, 132)
+scale = Vector2(1.32474, 1.32474)
+texture = ExtResource("1_t2d04")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 300.0
+offset_right = 778.0
+offset_bottom = 345.0
+text = "The judge was not convinced"
+label_settings = SubResource("LabelSettings_nhmt5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Press Enter" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 476.0
+offset_right = 826.0
+offset_bottom = 521.0
+text = "Press Enter to go to Main Menu"
+label_settings = SubResource("LabelSettings_hqw75")

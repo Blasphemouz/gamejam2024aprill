@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://diec0m7jq1tk6"]
+
+[ext_resource type="Texture2D" uid="uid://bhh7e6ceyuxlo" path="res://assets/cooking sim/saunawin.png" id="1_snjdt"]
+[ext_resource type="Script" path="res://you_win.gd" id="1_twuuh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ijd0"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_57666"]
+font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_twuuh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 72.0
+offset_right = 806.0
+offset_bottom = 176.0
+texture = ExtResource("1_snjdt")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 352.0
+text = "Congratulations!
+You beat the legal system!"
+label_settings = SubResource("LabelSettings_5ijd0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Press Enter" type="Label" parent="ColorRect"]
+offset_left = 336.0
+offset_top = 480.0
+offset_right = 821.0
+offset_bottom = 525.0
+text = "Press Enter to go to Main Menu"
+label_settings = SubResource("LabelSettings_57666")
