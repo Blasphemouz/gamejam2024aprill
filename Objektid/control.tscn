@@ -95,9 +95,9 @@ expand_icon = true
 visible = false
 layout_mode = 0
 offset_left = -595.0
-offset_top = 128.0
-offset_right = -50.0
-offset_bottom = 454.0
+offset_top = 121.0
+offset_right = -38.0
+offset_bottom = 470.0
 
 [node name="Label" type="Label" parent="tutorial/Panel"]
 layout_mode = 0
@@ -109,11 +109,12 @@ text = "TUTORIAL
 
 You are going to a sauna with a renowned Finnish man.
 To impress him, you have to prepare sauna items
-and prove you are worthy of his sauna.
+and prove you are worthy of his sauna. 
 
 
 CLICK to pick up and drop ingredients to craft the ideal leil. 
 
+If you are happy with your leil, press FINISH.
 
 Match his tastes and pass his judgment to get to his sauna."
 horizontal_alignment = 1
