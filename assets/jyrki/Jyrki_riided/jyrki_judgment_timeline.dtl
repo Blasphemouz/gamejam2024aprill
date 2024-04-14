@@ -4,3 +4,8 @@ join Jyrki 2
 Jyrki (jyrki_happy): Time for sauna. Let me see what you make.
 [sound path="res://assets/SFX/saunacook/jyrki_neutral.mp3" volume="0.0"]
 Jyrki (jyrki_neutral): ...
+do Stats.judge_viht(1.0)
+if {judgment.viht} == true:
+	Jyrki: läks sisse
+else:
+	Jyrki: läks läbi

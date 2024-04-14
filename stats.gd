@@ -12,11 +12,11 @@ var vesi = 0
 var lapinkulta = 0
 var viht1 = 0
 var viht2 = 0
-var viht3 = 0
+var viht3 = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,3 +34,27 @@ func muuda(punaseid,kollaseid, siniseid, rohelisi, mee, joo, vee, lapin, viht11,
 	viht1 = viht11
 	viht2 = viht22
 	viht3 = viht33
+
+func judge_õlu(õlu):
+	if õlu >= lapinkulta:
+		return true
+	else:
+		return false
+	
+func judge_viht(viht):
+	if viht >= viht3:
+		Dialogic.VAR.judgment.set('viht', true)
+	else:
+		return false
+	
+func judge_päkapikk(päkapikk):
+	if päkapikk >= rohelisipäkkapikke:
+		return true
+	else:
+		return false
+	
+func judge_mesi(judgemesi):
+	if judgemesi >= mesi:
+		return true
+	else:
+		return false
