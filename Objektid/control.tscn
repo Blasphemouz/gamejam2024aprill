@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdfni6sjn8v2g"]
+[gd_scene load_steps=20 format=3 uid="uid://bdfni6sjn8v2g"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_lgess"]
 [ext_resource type="Texture2D" uid="uid://b4qsam0b5r2qv" path="res://assets/titlescreen/title_screen.png" id="2_ljkto"]
@@ -35,8 +35,6 @@ corner_radius_bottom_left = 10
 [sub_resource type="Theme" id="Theme_7fwsv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kptt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5unka"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -99,6 +97,33 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Panel" type="Panel" parent="tutorial"]
+visible = false
+layout_mode = 0
+offset_left = -595.0
+offset_top = 128.0
+offset_right = -50.0
+offset_bottom = 454.0
+
+[node name="Label" type="Label" parent="tutorial/Panel"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 545.0
+offset_bottom = 328.0
+text = "TUTORIAL
+
+
+You are going to a sauna with a renowned Finnish man.
+To impress him, you have to prepare sauna items
+and prove you are worthy of his sauna.
+
+
+CLICK to pick up and drop ingredients to craft the ideal leil. 
+
+
+Match his tastes and pass his judgment to get to his sauna."
+horizontal_alignment = 1
+
 [node name="Settings" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
@@ -132,6 +157,14 @@ offset_right = 885.0
 offset_bottom = 298.0
 theme = SubResource("Theme_7vt5s")
 
+[node name="CheckButton" type="CheckButton" parent="Settings/Panel"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 195.0
+offset_right = 418.0
+offset_bottom = 226.0
+text = "Fullscreen"
+
 [node name="välju" type="Button" parent="Settings/Panel"]
 texture_filter = 1
 layout_mode = 0
@@ -152,7 +185,16 @@ step = 0.001
 value = 1.0
 bus_name = "Master"
 
+[node name="Label" type="Label" parent="Settings/Panel/master"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = -28.0
+offset_right = 176.0
+offset_bottom = -5.0
+text = "Audio"
+
 [node name="SFX" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+visible = false
 layout_mode = 0
 offset_left = 200.0
 offset_top = 208.0
@@ -162,6 +204,7 @@ max_value = 0.0
 bus_name = "SFX"
 
 [node name="Music" parent="Settings/Panel" instance=ExtResource("5_3p4xw")]
+visible = false
 layout_mode = 0
 offset_left = 204.0
 offset_top = 285.0
@@ -203,16 +246,6 @@ offset_left = 488.0
 offset_top = 120.0
 offset_right = 904.0
 offset_bottom = 632.0
-
-[node name="exittutoutorial" type="Button" parent="tutorialpanel"]
-layout_mode = 0
-offset_left = 328.0
-offset_top = 16.0
-offset_right = 360.0
-offset_bottom = 48.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_5unka")
-flat = true
-expand_icon = true
 
 [node name="Label" type="Label" parent="tutorialpanel"]
 layout_mode = 0
@@ -284,6 +317,6 @@ offset_bottom = 582.0
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="tutorial" to="." method="_on_toutorial_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Settings/Panel/CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="Settings/Panel/välju" to="." method="_on_välju_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="tutorialpanel/exittutoutorial" to="." method="_on_exittoutoutorial_pressed"]

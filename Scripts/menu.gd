@@ -1,5 +1,5 @@
 extends Control
-@onready var tutorialpanel = $tutorialpanel
+@onready var tutorialpanel = $tutorial/Panel
 @onready var vajutus = $vajutus
 @onready var control = $"."
 
@@ -30,7 +30,11 @@ func _on_exit_pressed():
 
 func _on_toutorial_pressed():
 	vajutus.play()
-	tutorialpanel.visible=true
+	if tutorialpanel.visible==false:
+		tutorialpanel.visible=true
+	else:
+		tutorialpanel.visible=false
+		
 
 func _on_exittoutoutorial_pressed():
 	vajutus.play()
@@ -48,3 +52,10 @@ func _on_välju_pressed():
 		panel.visible=false
 	else:
 		panel.visible=true
+
+
+func _on_check_button_pressed():
+	if(DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=30 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://bytook43aob6v" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://d3pmby88mtfqv" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://bucl7bgo7tm4o" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://bj886egio4u6y" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://bx7803dtq8gdb" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://ce6dop04bfqc" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://d0uwu08wcushs" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://b0wi8fyggd31p" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://dglsm1mnb8qvo" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://bfe0rtr72cuay" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
