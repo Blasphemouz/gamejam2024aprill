@@ -44,6 +44,7 @@ func _on_exittoutoutorial_pressed():
 func _on_settings_pressed():
 	if( panel.visible==false):
 		panel.visible=true
+		vajutus.play()
 	else:
 		panel.visible=false
 
