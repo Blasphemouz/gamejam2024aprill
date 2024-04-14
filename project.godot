@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogicScript="*res://dialogic_script.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Stats="*res://stats.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

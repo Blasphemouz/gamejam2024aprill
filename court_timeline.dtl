@@ -95,7 +95,6 @@ jyrki_attorney (jyrki_think): ...
 		[sound path="res://assets/SFX/saunacook/COURT_Jouni_angry.mp3" volume="0.0"]
 		jouni (attorney_elf_suprised): Kyllä, teidän kunnianne. (ノ-_-)ノ ミ ┴┴
 		leave --All--
-		set {points} -= 1
 	- Olin huoneessa, joka katsoi suoraan paikkaan, jossa herra Kivinen olisi nähnyt tapahtuman, eikä häntä nähty.
 		leave --All--
 		[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
@@ -153,6 +152,8 @@ jyrki_attorney (jyrki_think): ...
 			join jouni 1
 			jouni (attorney_elf_angry): !!!
 			leave --All--
+			set {points} += 5
+			jump lõpp
 		- Olin suhteessa hänen kanssaan ja hän on vihainen minulle.
 			leave --All--
 			[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
@@ -227,8 +228,7 @@ jouni (attorney_elf_angry): There is also recent case that good proof that Jyrki
 jouni (attorney_elf_suprised): Tonttu colony move near Jyrki house last week under Finland immigration policy.
 jouni (attorney_elf_neutral): But building still incomplete, so tonttu might have go to Jyrki house by accident.
 [sound path="res://assets/SFX/saunacook/COURT_Jouni_neutral.mp3" volume="0.0"]
-jouni (attorney_elf_angry): That’s when the victim murdered my kind!! In cold blood… >\:(\
-leave --All--
+jouni (attorney_elf_angry): That’s when the victim murdered my kind!! In cold blood… >\:(
 leave --All--
 [background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 join judge 1
@@ -265,6 +265,8 @@ jyrki_attorney (jyrki_angry): ...
 	join jouni 1
 	jouni (attorney_elf_suprised): !!!
 	leave --All--
+	set {points} -= 5
+	jump lõpp
 - *throw leil at Jouni Jere Jakkolla*
 	[sound path="res://assets/SFX/leil_1.mp3" volume="0.0"]
 	jyrki_attorney (jyrki_angry_smirk): *Jyrki throws leil at Jouni*
@@ -292,6 +294,7 @@ jyrki_attorney (jyrki_angry): ...
 	[sound path="res://assets/SFX/saunacook/COURT_Judge_innocent.mp3" volume="0.0"]
 	judge (Judge): Let us move on with the case.
 	set {points} += 1
+label lõpp
 [music fade="0.0" volume="0.0"]
 judge (Judge_shocked): The court has reached a verdict.
 judge (Judge): *slams hammer* …
