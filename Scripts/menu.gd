@@ -7,7 +7,7 @@ extends Control
 var kursor = load("res://assets/cursor/cursor_select.png")
 @onready var panel = $Settings/Panel
 var kursor_vajutus = load("res://assets/cursor/cursor_select_tap.png")
-@onready var välju = $"Settings/Panel/välju"
+@onready var välju = $"Settings/Panel/TextureRect/välju"
 
 func _ready():
 	# Kursor default

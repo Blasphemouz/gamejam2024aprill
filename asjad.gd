@@ -11,7 +11,8 @@ func _ready():
 
 func _process(_delta):
 	if(kaspeal):
-		nupp.set_position(get_global_mouse_position() + Vector2(-20, -20))
+		nupp.get_child(0).visible=false
+		nupp.set_position(get_global_mouse_position() + Vector2(-70, -70))
 
 
 func _on_pressed():
