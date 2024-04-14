@@ -26,7 +26,7 @@ var viht2 = 0
 var viht3 = 0
 
 @onready var spawner = $"."
-
+@onready var node = $Node
 @onready var pause_menu = $pause_menu
 var paused = false
 # Kursori asjad
@@ -145,8 +145,7 @@ func rohelineadd_enemy():
 	enemy.position = Vector2( rng.randf_range(0,1)*get_viewport().get_visible_rect().size.x, rng.randf_range(0.3,0.7)*get_viewport().get_visible_rect().size.y)
 
 func _on_järgminestseen_pressed():
-	if(jook>10):
-		pass
+	node.muuda(päkkapikke,kollaseidpäkkapikke,siniseidpäkkapikke,rohelisipäkkapikke,mesi, jook, vesi, lapinkulta, viht1, viht2, viht3)
 	#erinevad stseenid pärast seda vastavalt potis olevatale asjadele
 
 

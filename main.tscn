@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=37 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://cbsncf1hro565" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bbxafqnipt7b0" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
 [ext_resource type="Texture2D" uid="uid://cm33h60lef35w" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
+[ext_resource type="Script" path="res://stats.gd" id="14_u0ghg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -267,6 +268,9 @@ offset_top = 140.0
 offset_right = 446.0
 offset_bottom = 140.0
 scale = Vector2(3, 3)
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("14_u0ghg")
 
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]
