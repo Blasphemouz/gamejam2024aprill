@@ -79,6 +79,7 @@ func lisamuu(nood):
 	if(nood.name == "jook"):
 		jook += 1
 		pildid.lisa("jook",jook)
+		promillleil()
 		
 	if(nood.name == "vesi"):
 		vesi += 1
@@ -87,6 +88,8 @@ func lisamuu(nood):
 	if(nood.name == "lapinkulta"):
 		lapinkulta += 1
 		pildid.lisa("lapinkulta",lapinkulta)
+		promillleil()
+		
 	if (nood.name == "viht1"):
 		viht1 += 1
 		pildid.lisa("viht1", viht1)
@@ -101,21 +104,37 @@ func lisapäkapikk():
 	päkkapikke += 1
 	pildid.lisa("punane", päkkapikke)
 	add_enemy()
+	tonttuslaughter()
+	
+func tonttuslaughter():
+	if (kollaseidpäkkapikke + päkkapikke + siniseidpäkkapikke + rohelisipäkkapikke == 3):
+		$GoodSlaughterPlayer.play()
+		$GoodSlaughter.visible = not $GoodSlaughter.visible
+		$GoodSlaughterTimer.start()
+		
+func promillleil():
+	if (lapinkulta + jook == 3):
+		$GoodBeerPlayer.play()
+		$GoodBeer.visible = not $GoodBeer.visible
+		$GoodBeerTimer.start()
 
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke += 1
 	pildid.lisa("kollane", kollaseidpäkkapikke)
 	kollaneadd_enemy()
+	tonttuslaughter()
 	
 func lisasininepäkapikk():
 	siniseidpäkkapikke += 1
 	pildid.lisa("sinine", siniseidpäkkapikke)
 	sinineadd_enemy()
-
+	tonttuslaughter()
+	
 func lisarohelinepäkapikk():
 	rohelisipäkkapikke += 1
 	pildid.lisa("roheline", rohelisipäkkapikke)
 	rohelineadd_enemy()
+	tonttuslaughter()
 
 func getpada():
 	var hiir= get_global_mouse_position()
@@ -151,3 +170,70 @@ func _on_järgminestseen_pressed():
 
 func _on_pressed():
 	pass # Replace with function body.
+
+
+func _on_good_beer_timer_timeout():
+	$GoodBeer.visible = not $GoodBeer.visible
+
+
+func _on_good_slaughter_timer_timeout():
+	$GoodSlaughter.visible = not $GoodSlaughter.visible
+
+
+func _on_vesi_mouse_entered():
+	$vesi/vesiDesc.visible = true
+
+
+func _on_vesi_mouse_exited():
+	$vesi/vesiDesc.visible  = false
+
+
+func _on_jook_mouse_entered():
+	$jook/jookDesc.visible = true
+
+
+func _on_jook_mouse_exited():
+	$jook/jookDesc.visible = false
+
+
+func _on_honey_mouse_entered():
+	$honey/honeyDesc.visible = true
+
+
+func _on_honey_mouse_exited():
+	$honey/honeyDesc.visible = false
+
+
+func _on_lapinkulta_mouse_entered():
+	$lapinkulta/lapinDesc.visible = true
+	
+
+
+func _on_lapinkulta_mouse_exited():
+	$lapinkulta/lapinDesc.visible = false
+
+
+func _on_viht_1_mouse_entered():
+	$viht1/viht1Desc.visible = true
+
+
+func _on_viht_1_mouse_exited():
+	$viht1/viht1Desc.visible = false
+	
+
+
+
+func _on_viht_2_mouse_entered():
+	$viht2/viht2Desc.visible = true
+
+
+func _on_viht_2_mouse_exited():
+	$viht2/viht2Desc.visible = false
+
+
+func _on_viht_3_mouse_entered():
+	$viht3/viht3Desc.visible = true
+
+
+func _on_viht_3_mouse_exited():
+	$viht3/viht3Desc.visible = false
