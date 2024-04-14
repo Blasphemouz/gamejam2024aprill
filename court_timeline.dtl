@@ -34,7 +34,7 @@ join jouni 1
 [sound path="res://assets/SFX/saunacook/COURT_Jouni_neutral.mp3" volume="0.0"]
 jouni (attorney_elf_angry): Yes, Your Honor.
 jouni (attorney_elf_suprised): The victim was spotted by Antti Kivinen, who make his way to Jyrki’s house to deliver his yönkirje.
-jouni (attorney_elf_neutral): Before entering Jyrki house, Mr. Kivinen see the victim murder innocent tonttu when he was approaching the window in the sauna relax area.
+jouni (attorney_elf_neutral): Before entering Jyrki house, Mr. Kivinen see the defendant murder innocent tonttu when he was approaching the window in the sauna relax area.
 [sound path="res://assets/SFX/saunacook/COURT_Jouni_angry.mp3" volume="0.0"]
 jouni (attorney_elf_angry): After witnessing scene, Antti come to poliisi to report as eyewitness.
 leave --All--
@@ -223,7 +223,7 @@ jyrki_attorney (jyrki_think): ...
 	leave --All--
 [background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 join jouni (attorney_elf_neutral) 1
-jouni (attorney_elf_angry): There is also recent case that good proof that Jyrki guilty.
+jouni (attorney_elf_angry): There is also recent case that is good proof that Jyrki guilty.
 [sound path="res://assets/SFX/saunacook/COURT_Jouni_angry.mp3" volume="0.0"]
 jouni (attorney_elf_suprised): Tonttu colony move near Jyrki house last week under Finland immigration policy.
 jouni (attorney_elf_neutral): But building still incomplete, so tonttu might have go to Jyrki house by accident.
@@ -237,7 +237,7 @@ judge (Judge_eyes_closed): I see, this is rather convincing evidence.
 judge (Judge_shocked): What do you have to say in defense to the prosecution, Jyrki?
 leave --All--
 [background arg="res://assets/courtroom/court_table.png" fade="0.0"]
-join jyrki_attorney 1
+join jyrki_attorney (jyrki_angry_smirk) 1
 jyrki_attorney (jyrki_angry): ...
 - Uh whuhh ??.. ; =,..
 	leave --All--
@@ -259,10 +259,10 @@ jyrki_attorney (jyrki_angry): ...
 	leave --All--
 	[background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 	join judge (Judge_shocked) 1
-	!!!
 	leave --All--
 	[background arg="res://assets/courtroom/court_table_flip.png" fade="0.0"]
 	join jouni 1
+	judge: !!!
 	jouni (attorney_elf_suprised): !!!
 	leave --All--
 	set {points} -= 5
