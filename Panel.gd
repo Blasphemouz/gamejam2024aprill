@@ -14,6 +14,9 @@ var vesitekst
 var jooktekst
 var honeytekst
 var lapinkultatekst
+var viht1tekst
+var viht2tekst
+var viht3tekst
 
 
 func _ready():
@@ -66,6 +69,18 @@ func lisa(mida, mitu):
 		if(mida == "lapinkulta"):
 			lapinkultatekst=uustekst
 			img = load("res://assets/cooking sim/lapinkulta.png")
+		
+		if(mida == "viht1"):
+			viht1tekst=uustekst
+			img = load("res://assets/vihad/viht 1.png")
+			
+		if(mida == "viht2"):
+			viht2tekst=uustekst
+			img = load("res://assets/vihad/viht 2.png")
+		
+		if(mida == "viht3"):
+			viht3tekst=uustekst
+			img = load("res://assets/vihad/viht 3.png")
 			
 		uus.texture = img
 		pos += Vector2(0, 50)
@@ -97,3 +112,12 @@ func lisa(mida, mitu):
 		
 	if(mida == "lapinkulta"):
 		muudatekst(lapinkultatekst, mitu)
+	
+	if(mida == "viht1"):
+		muudatekst(viht1tekst, mitu)
+		
+	if(mida == "viht2"):
+		muudatekst(viht2tekst, mitu)
+		
+	if(mida == "viht3"):
+		muudatekst(viht3tekst, mitu)

@@ -21,6 +21,9 @@ var mesi = 0
 var jook = 0
 var vesi = 0
 var lapinkulta = 0
+var viht1 = 0
+var viht2 = 0
+var viht3 = 0
 
 @onready var spawner = $"."
 
@@ -84,6 +87,15 @@ func lisamuu(nood):
 	if(nood.name == "lapinkulta"):
 		lapinkulta += 1
 		pildid.lisa("lapinkulta",lapinkulta)
+	if (nood.name == "viht1"):
+		viht1 += 1
+		pildid.lisa("viht1", viht1)
+	if (nood.name == "viht2"):
+		viht2 += 1
+		pildid.lisa("viht2", viht2)
+	if (nood.name == "viht3"):
+		viht3 += 1
+		pildid.lisa("viht3", viht3)
 
 func lisapäkapikk():
 	päkkapikke += 1
@@ -136,3 +148,7 @@ func _on_järgminestseen_pressed():
 	if(jook>10):
 		pass
 	#erinevad stseenid pärast seda vastavalt potis olevatale asjadele
+
+
+func _on_pressed():
+	pass # Replace with function body.
