@@ -1,22 +1,23 @@
-[gd_scene load_steps=40 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=46 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://daapmkxclt3qv" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://b5ewqn0mo513o" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://bdowkfkn55e0p" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
-[ext_resource type="Texture2D" uid="uid://cmmbcl38hyb3y" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://70yvjcip45lm" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://bg8if76j72g8" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://bvvq0aitfsplh" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://cm1c1ylqkjyh1" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
+[ext_resource type="Texture2D" uid="uid://b0mrowmhqj5k6" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://bgr2646qrw5w0" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://dh01d3wlurnql" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
-[ext_resource type="Texture2D" uid="uid://b6y0waxqqhjbt" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
+[ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://UI/nuppud.png" id="10_35t0v"]
+[ext_resource type="Texture2D" uid="uid://df2c8fvycpti4" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
-[ext_resource type="Texture2D" uid="uid://biscq2vqnnjmt" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
-[ext_resource type="Texture2D" uid="uid://b6edjkjbgtilq" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
+[ext_resource type="Texture2D" uid="uid://deuv7aapp2x3g" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
+[ext_resource type="Texture2D" uid="uid://b0aef2geuqqpa" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
 [ext_resource type="AudioStream" uid="uid://cseae7mrsanfn" path="res://assets/SFX/saunacook/promill_leil.mp3" id="16_udbwl"]
 [ext_resource type="AudioStream" uid="uid://chjblseq3k72p" path="res://assets/SFX/saunacook/tonttu_slaughter.mp3" id="17_0577t"]
-[ext_resource type="Texture2D" uid="uid://blj4fhd2vlwqt" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
+[ext_resource type="Texture2D" uid="uid://ccq0t1xpee74b" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -61,6 +62,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ue8h6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfvd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp0kf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qy27v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnkgw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtixj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ba0lh"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -107,20 +118,21 @@ offset_bottom = 39.0
 [node name="Pada" type="Panel" parent="."]
 process_mode = 3
 layout_mode = 0
-offset_left = 531.0
-offset_top = 275.0
-offset_right = 681.0
-offset_bottom = 412.0
+offset_left = 492.0
+offset_top = 253.0
+offset_right = 620.0
+offset_bottom = 423.0
+scale = Vector2(1.27047, 1.298)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
 
 [node name="TextureRect" type="TextureRect" parent="Pada"]
 layout_mode = 0
-offset_left = -42.0
-offset_top = -54.0
-offset_right = 189.0
-offset_bottom = 159.0
+offset_left = -34.0
+offset_top = -1.0
+offset_right = 197.0
+offset_bottom = 212.0
 texture = ExtResource("4_ax5vs")
-expand_mode = 2
+expand_mode = 1
 stretch_mode = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -244,12 +256,29 @@ text = "[bgcolor=#00000060][color=yellow]A Finnish beer. Has heavy promill.[/col
 
 [node name="järgminestseen" type="Button" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_left = 880.0
-offset_top = 473.0
-offset_right = 1015.0
-offset_bottom = 517.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -85.0
+offset_right = -29.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/icon_pressed_color = Color(0.501961, 0.407843, 0.262745, 1)
+theme_override_colors/icon_hover_color = Color(0.65098, 0.509804, 0.0862745, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cp0kf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qy27v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wnkgw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xtixj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ba0lh")
 text = "FINISH"
+icon = ExtResource("10_35t0v")
+icon_alignment = 1
+expand_icon = true
 
 [node name="viht1" type="Button" parent="."]
 texture_filter = 1

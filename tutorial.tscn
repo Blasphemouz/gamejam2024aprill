@@ -7,7 +7,7 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wd1wx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lixse"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5lf8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x782a"]
 
@@ -36,16 +36,23 @@ script = ExtResource("2_ciljl")
 [node name="Button" type="Button" parent="TextureRect"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_wd1wx")
-layout_mode = 0
-offset_left = 920.0
-offset_top = 521.0
-offset_right = 1107.0
-offset_bottom = 635.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -178.0
+offset_right = -58.0
+offset_bottom = -64.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_colors/icon_normal_color = Color(0.00392157, 0.219608, 0.917647, 1)
 theme_override_colors/icon_pressed_color = Color(0.00392157, 0.219608, 0.690196, 0.698039)
 theme_override_colors/icon_hover_color = Color(0.00392157, 0.219608, 0.690196, 0.607843)
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lixse")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b5lf8")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_x782a")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0lmrd")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ob4ix")
