@@ -65,19 +65,19 @@ texture = ExtResource("2_rjuvx")
 
 [node name="Label" type="Label" parent="TextureRect2"]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 43.0
-offset_right = 729.0
-offset_bottom = 394.0
+offset_left = 57.0
+offset_top = 45.0
+offset_right = 738.0
+offset_bottom = 396.0
 text = "TUTORIAL
 
 
 You are going to a sauna with a renowned Finnish man.
-To impress him, you have to prepare sauna items
+To impress him, you have to prepare the perfect leil
 and prove you are worthy of his sauna.
 
 
-CLICK to pick up and drop ingredients to craft the ideal leil. 
+CLICK to pick up and drop ingredients (including viht) to craft the ideal leil. 
 
 If you are happy with your leil, press FINISH.
 
