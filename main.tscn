@@ -1,23 +1,23 @@
 [gd_scene load_steps=46 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
-[ext_resource type="Texture2D" uid="uid://blp0lbbkkqugh" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
+[ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
 [ext_resource type="Script" path="res://Panel.gd" id="3_jmn6d"]
 [ext_resource type="Script" path="res://asjad.gd" id="3_tfv3r"]
-[ext_resource type="Texture2D" uid="uid://dkhim08wclatg" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
-[ext_resource type="Texture2D" uid="uid://d34op8jfdp5bs" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
-[ext_resource type="Texture2D" uid="uid://dsvalclptt4r5" path="res://assets/cooking sim/water.png" id="5_ymamc"]
-[ext_resource type="Texture2D" uid="uid://cjpfdudssgvvm" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
-[ext_resource type="Texture2D" uid="uid://cyokxjdly3rdt" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
+[ext_resource type="Texture2D" uid="uid://bvvq0aitfsplh" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
+[ext_resource type="Texture2D" uid="uid://cm1c1ylqkjyh1" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
+[ext_resource type="Texture2D" uid="uid://b0mrowmhqj5k6" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="Texture2D" uid="uid://bgr2646qrw5w0" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="Texture2D" uid="uid://dh01d3wlurnql" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
 [ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://UI/nuppud.png" id="10_35t0v"]
-[ext_resource type="Texture2D" uid="uid://dsgwgcgyqnfmx" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
+[ext_resource type="Texture2D" uid="uid://df2c8fvycpti4" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
-[ext_resource type="Texture2D" uid="uid://djga1j6j3h0j5" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
-[ext_resource type="Texture2D" uid="uid://p34g246calun" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
+[ext_resource type="Texture2D" uid="uid://deuv7aapp2x3g" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
+[ext_resource type="Texture2D" uid="uid://b0aef2geuqqpa" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
 [ext_resource type="AudioStream" uid="uid://cseae7mrsanfn" path="res://assets/SFX/saunacook/promill_leil.mp3" id="16_udbwl"]
 [ext_resource type="AudioStream" uid="uid://chjblseq3k72p" path="res://assets/SFX/saunacook/tonttu_slaughter.mp3" id="17_0577t"]
-[ext_resource type="Texture2D" uid="uid://c1jiyqhq0tqsa" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
+[ext_resource type="Texture2D" uid="uid://ccq0t1xpee74b" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -118,20 +118,21 @@ offset_bottom = 39.0
 [node name="Pada" type="Panel" parent="."]
 process_mode = 3
 layout_mode = 0
-offset_left = 531.0
-offset_top = 275.0
-offset_right = 681.0
-offset_bottom = 412.0
+offset_left = 492.0
+offset_top = 253.0
+offset_right = 620.0
+offset_bottom = 423.0
+scale = Vector2(1.27047, 1.298)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_glluq")
 
 [node name="TextureRect" type="TextureRect" parent="Pada"]
 layout_mode = 0
-offset_left = -42.0
-offset_top = -54.0
-offset_right = 189.0
-offset_bottom = 159.0
+offset_left = -34.0
+offset_top = -1.0
+offset_right = 197.0
+offset_bottom = 212.0
 texture = ExtResource("4_ax5vs")
-expand_mode = 2
+expand_mode = 1
 stretch_mode = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

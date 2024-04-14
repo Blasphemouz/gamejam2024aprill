@@ -102,7 +102,7 @@ func lisamuu(nood):
 func lisapäkapikk():
 	päkkapikke += 1
 	pildid.lisa("punane", päkkapikke)
-	add_enemy()
+	#add_enemy()
 	tonttuslaughter()
 	
 func tonttuslaughter():
@@ -120,19 +120,19 @@ func promillleil():
 func lisakollanepäkapikk():
 	kollaseidpäkkapikke += 1
 	pildid.lisa("kollane", kollaseidpäkkapikke)
-	kollaneadd_enemy()
+	#kollaneadd_enemy()
 	tonttuslaughter()
 	
 func lisasininepäkapikk():
 	siniseidpäkkapikke += 1
 	pildid.lisa("sinine", siniseidpäkkapikke)
-	sinineadd_enemy()
+	#sinineadd_enemy()
 	tonttuslaughter()
 	
 func lisarohelinepäkapikk():
 	rohelisipäkkapikke += 1
 	pildid.lisa("roheline", rohelisipäkkapikke)
-	rohelineadd_enemy()
+	#rohelineadd_enemy()
 	tonttuslaughter()
 
 func getpada():
