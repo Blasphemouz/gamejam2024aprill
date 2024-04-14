@@ -24,6 +24,7 @@ var lapinkulta = 0
 var viht1 = 0
 var viht2 = 0
 var viht3 = 0
+@onready var laul = $laul
 
 @onready var audio = $audio
 @onready var spawner = $"."
@@ -165,6 +166,8 @@ func rohelineadd_enemy():
 
 func _on_järgminestseen_pressed():
 	Stats.muuda(päkkapikke,kollaseidpäkkapikke,siniseidpäkkapikke,rohelisipäkkapikke,mesi, jook, vesi, lapinkulta, viht1, viht2, viht3)
+	
+	laul.stop()
 	get_tree().change_scene_to_file("res://jyrki_judgment.tscn")
 	Dialogic.start("res://assets/jyrki/Jyrki_riided/jyrki_judgment_timeline.dtl") 
 
