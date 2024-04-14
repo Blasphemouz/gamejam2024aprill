@@ -65,4 +65,4 @@ func judgment_final(tingimus):
 func eelminestseen():
 	get_tree().change_scene_to_file("res://main.tscn")
 func järgminestseen():
-	get_tree().change_scene_to_file("res://kollanepäkapikk.tscn")
+	get_tree().change_scene_to_file("res://try_again.tscn")

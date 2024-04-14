@@ -36,6 +36,7 @@ do Stats.judgment_final(0.0)
 if {judgment.tingimus} == false:
 	[sound path="res://assets/SFX/saunacook/jyrki_angry.mp3" volume="0.0"]
 	Jyrki (jyrki_neutral): I think I will make it myself. You are amateur like a virolainen.
+	do Stats.järgminestseen()
 else:
 	[sound path="res://assets/SFX/DATING_Jyrki_happy.mp3" volume="0.0"]
 	Jyrki (jyrki_happy): I like your tastes. You are welcome in my sauna.
