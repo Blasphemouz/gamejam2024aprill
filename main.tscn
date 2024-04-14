@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=36 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://dtxxgua3npesk" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://n5ng7px76ib7" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
 [ext_resource type="Texture2D" uid="uid://byjwht3hwxs0j" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
+[ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
+[ext_resource type="Texture2D" uid="uid://cash8tfw8nt2k" path="res://assets/vihad/viht 2.png" id="12_6mtxg"]
+[ext_resource type="Texture2D" uid="uid://bm47ngghkc1c8" path="res://assets/vihad/viht 3.png" id="13_t2tu5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chvtc"]
 
@@ -209,8 +212,62 @@ offset_right = 446.0
 offset_bottom = 140.0
 scale = Vector2(3, 3)
 
+[node name="viht1" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 47.0
+offset_right = 1114.0
+offset_bottom = 182.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ln8ls")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("11_xrg64")
+flat = true
+expand_icon = true
+script = ExtResource("3_tfv3r")
+
+[node name="viht2" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 968.0
+offset_top = 53.0
+offset_right = 1029.0
+offset_bottom = 188.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ln8ls")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("12_6mtxg")
+flat = true
+expand_icon = true
+script = ExtResource("3_tfv3r")
+
+[node name="viht3" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 887.0
+offset_top = 50.0
+offset_right = 948.0
+offset_bottom = 185.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ln8ls")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3fxao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2adqk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8h6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfvd8")
+icon = ExtResource("13_t2tu5")
+flat = true
+expand_icon = true
+script = ExtResource("3_tfv3r")
+
 [connection signal="pressed" from="jook" to="jook" method="_on_pressed"]
 [connection signal="pressed" from="vesi" to="vesi" method="_on_pressed"]
 [connection signal="pressed" from="honey" to="honey" method="_on_pressed"]
 [connection signal="pressed" from="lapinkulta" to="lapinkulta" method="_on_pressed"]
 [connection signal="pressed" from="järgminestseen" to="." method="_on_järgminestseen_pressed"]
+[connection signal="pressed" from="viht1" to="viht1" method="_on_pressed"]
+[connection signal="pressed" from="viht2" to="viht2" method="_on_pressed"]
+[connection signal="pressed" from="viht3" to="viht3" method="_on_pressed"]
