@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://d27a3acpkhe8p"]
+[gd_scene load_steps=52 format=3 uid="uid://d27a3acpkhe8p"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7h4rt"]
 [ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="2_af7ki"]
@@ -7,14 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://bvvq0aitfsplh" path="res://assets/cooking sim/‰llenaut.png" id="4_a636i"]
 [ext_resource type="Texture2D" uid="uid://cm1c1ylqkjyh1" path="res://assets/cooking sim/leil/leil.png" id="4_ax5vs"]
 [ext_resource type="Texture2D" uid="uid://b0mrowmhqj5k6" path="res://assets/cooking sim/water.png" id="5_ymamc"]
+[ext_resource type="AudioStream" uid="uid://cvyq52cohw1uk" path="res://assets/SFX/saunacook/õllenaut.mp3" id="7_3nkqj"]
 [ext_resource type="Texture2D" uid="uid://bgr2646qrw5w0" path="res://assets/cooking sim/honey.png" id="7_4l0bf"]
+[ext_resource type="AudioStream" uid="uid://dm28w3w412wlu" path="res://assets/SFX/saunacook/vesi.mp3" id="7_b5y0h"]
 [ext_resource type="Texture2D" uid="uid://dh01d3wlurnql" path="res://assets/cooking sim/lapinkulta.png" id="8_mpwkt"]
 [ext_resource type="PackedScene" uid="uid://dpymnir8bhwdk" path="res://pause_menu.tscn" id="9_a2btv"]
 [ext_resource type="Texture2D" uid="uid://c8gfh0xeqde3r" path="res://UI/nuppud.png" id="10_35t0v"]
 [ext_resource type="Texture2D" uid="uid://df2c8fvycpti4" path="res://assets/vihad/viht 2.png" id="11_1ep76"]
+[ext_resource type="AudioStream" uid="uid://bfovlk8nwsfue" path="res://assets/SFX/saunacook/mesi.mp3" id="11_fjhnv"]
 [ext_resource type="Texture2D" uid="uid://dqhowo7c5khpm" path="res://assets/vihad/viht 1.png" id="11_xrg64"]
 [ext_resource type="Texture2D" uid="uid://deuv7aapp2x3g" path="res://assets/vihad/viht 3.png" id="12_ah7l6"]
 [ext_resource type="Texture2D" uid="uid://b0aef2geuqqpa" path="res://assets/cooking sim/promill_leil.png" id="12_ldb2t"]
+[ext_resource type="AudioStream" uid="uid://cnykfcm2f5sqi" path="res://assets/SFX/saunacook/lapin_kulta.mp3" id="13_by3tq"]
+[ext_resource type="AudioStream" uid="uid://38st0o2grrhr" path="res://assets/SFX/saunacook/viht.mp3" id="16_d6dr0"]
 [ext_resource type="AudioStream" uid="uid://cseae7mrsanfn" path="res://assets/SFX/saunacook/promill_leil.mp3" id="16_udbwl"]
 [ext_resource type="AudioStream" uid="uid://chjblseq3k72p" path="res://assets/SFX/saunacook/tonttu_slaughter.mp3" id="17_0577t"]
 [ext_resource type="Texture2D" uid="uid://ccq0t1xpee74b" path="res://assets/cooking sim/tonttuslaughter.png" id="18_monsy"]
@@ -136,8 +141,6 @@ texture = ExtResource("4_ax5vs")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-
 [node name="jook" type="Button" parent="."]
 z_index = 1
 layout_mode = 1
@@ -167,6 +170,10 @@ offset_right = 226.0
 offset_bottom = 43.0
 bbcode_enabled = true
 text = "[bgcolor=#00000060][color=yellow]A beer from a neighbor country. A light beverage.[/color][/bgcolor]"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="jook"]
+stream = ExtResource("7_3nkqj")
+volume_db = 1.5
 
 [node name="vesi" type="Button" parent="."]
 z_index = 1
@@ -199,6 +206,10 @@ offset_bottom = 9.0
 bbcode_enabled = true
 text = "[bgcolor=#00000060]Good Finnish water. A nice beverage and great for leil.[/bgcolor]"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="vesi"]
+stream = ExtResource("7_b5y0h")
+volume_db = 1.5
+
 [node name="honey" type="Button" parent="."]
 z_index = 1
 texture_filter = 1
@@ -227,6 +238,10 @@ offset_bottom = 34.0
 bbcode_enabled = true
 text = "[bgcolor=#00000060][color=orange]Finnish honey. Gives off a sweet taste and aroma.[/color][/bgcolor]"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="honey"]
+stream = ExtResource("11_fjhnv")
+volume_db = 1.5
+
 [node name="lapinkulta" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
@@ -254,6 +269,10 @@ offset_bottom = 8.0
 bbcode_enabled = true
 text = "[bgcolor=#00000060][color=yellow]A Finnish beer. Has heavy promill.[/color]
 [/bgcolor]"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="lapinkulta"]
+stream = ExtResource("13_by3tq")
+volume_db = 1.5
 
 [node name="järgminestseen" type="Button" parent="."]
 texture_filter = 1
@@ -311,6 +330,10 @@ A birch viht. Good to swing.
 [/color][/bgcolor]
 "
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="viht1"]
+stream = ExtResource("16_d6dr0")
+volume_db = 1.5
+
 [node name="viht2" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
@@ -337,6 +360,10 @@ offset_right = 133.0
 offset_bottom = 260.0
 bbcode_enabled = true
 text = "[bgcolor=#00000060][color=green]A viht made of eucalyptus. Quite heavy to swing.[/color][/bgcolor]"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="viht2"]
+stream = ExtResource("16_d6dr0")
+volume_db = 1.5
 
 [node name="viht3" type="Button" parent="."]
 texture_filter = 1
@@ -366,6 +393,10 @@ bbcode_enabled = true
 text = "[bgcolor=#00000060][color=green]A viht made of linden branches. Surprisingly light to swing.
 [/color][/bgcolor]"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="viht3"]
+stream = ExtResource("16_d6dr0")
+volume_db = 1.5
+
 [node name="pause_menu" parent="." instance=ExtResource("9_a2btv")]
 visible = false
 visibility_layer = 512
@@ -391,11 +422,11 @@ one_shot = true
 
 [node name="GoodBeerPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_udbwl")
-volume_db = 1.0
+volume_db = 1.5
 
 [node name="GoodSlaughterPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_0577t")
-volume_db = 1.0
+volume_db = 1.5
 
 [node name="GoodSlaughterTimer" type="Timer" parent="."]
 one_shot = true
