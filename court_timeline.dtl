@@ -16,7 +16,7 @@ jyrki_attorney (jyrki_talk): Umm.. Defense ready too.
 leave jyrki_attorney
 [background arg="res://assets/courtroom/judge_background.png" fade="0.0"]
 join judge 1
-judge (Judge_shocked): Jyrki, your conduct during this trial will decide the fate of your client - murder of innocent tonttu elves is a serious client in the Scandinavian region.
+judge (Judge_shocked): Jyrki, your conduct during this trial will decide the fate of your client - murder of innocent tonttu elves is a serious crime in the Scandinavian region.
 judge (Judge): Be ready to defend your case.
 leave --All--
 [background arg="res://assets/courtroom/court_table.png" fade="0.0"]

@@ -37,31 +37,31 @@ func judge_õlu(õlu):
 	if ((õlu <= lapinkulta) and (jook == 0)):
 		Dialogic.VAR.judgment.set('õlu', true)
 	else:
-		return false
+		Dialogic.VAR.judgment.set('õlu', false)
 	
 func judge_viht(viht):
 	if ((viht <= viht3) and (viht2 == 0) and (viht1 == 0)):
 		Dialogic.VAR.judgment.set('viht', true)
 	else:
-		return false
+		Dialogic.VAR.judgment.set('viht', false)
 	
 func judge_päkapikk(päkapikk):
 	if (päkapikk <= rohelisipäkkapikke) and (päkkapikke == 0) and (kollaseidpäkkapikke) == 0 and (siniseidpäkkapikke == 0):
 		Dialogic.VAR.judgment.set('pakapikk', true)
 	else:
-		return false
+		return Dialogic.VAR.judgment.set('pakapikk', false)
 	
 func judge_mesi(judgemesi):
 	if judgemesi <= mesi:
 		Dialogic.VAR.judgment.set('judmesi', true)
 	else:
-		return false
+		Dialogic.VAR.judgment.set('judmesi', false)
 
 func judgment_final(tingimus):
 	if ((tingimus <= 0) and (Dialogic.VAR.judgment.get('õlu') == true) and (Dialogic.VAR.judgment.get('viht') == true) and (Dialogic.VAR.judgment.get('pakapikk') == true) and (Dialogic.VAR.judgment.get('judmesi')) == true):
 		Dialogic.VAR.judgment.set('tingimus', true)
 	else:
-		return false
+		Dialogic.VAR.judgment.set('tingimus', false)
 func eelminestseen():
 	get_tree().change_scene_to_file("res://main.tscn")
 func järgminestseen(path):

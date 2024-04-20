@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://k7qpxlp2dln1" path="res://assets/cooking sim/kitchen.png" id="1_vcgvk"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0
